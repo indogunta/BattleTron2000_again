@@ -35,6 +35,7 @@ public class EnemyAI : MonoBehaviour
         attack = GetComponent<Attack>();
         pursuit = GetComponent<OffsetPursuit>();
         wonder = GetComponent<Wonder>();
+
     }
 
     private void Update()
