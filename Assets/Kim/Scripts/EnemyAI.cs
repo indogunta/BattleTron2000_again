@@ -10,14 +10,21 @@ public enum EnemyAIstates
 
 public class EnemyAI : MonoBehaviour
 {
+
+    public static EnemyAI instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private float timer;
     private float dis;
     [SerializeField]
     private float minDis;
     [SerializeField]
     private float maxDis;
-    [SerializeField]
-    private NavMeshAgent enemy;
+    //[SerializeField]
+    public NavMeshAgent enemy;
 
     private EnemyAIstates currentState;
 
@@ -42,21 +49,28 @@ public class EnemyAI : MonoBehaviour
         switch (currentState)
         {
             case EnemyAIstates.Wander:
-               enemy.destination = wonder.Wandering();
-              //  Debug.Log("Player not seen: returning to wonder");
+                //enemy.destination = wonder.findNextNode();
+                if (!enemy.pathPending && enemy.remainingDistance < 0.5f)
+                {
+                    wonder.NextPoint();
+                }
+                //Debug.DrawLine(wonder.Wandering(), enemy.gameObject.transform.position, Color.red);
+                //  Debug.Log("Player not seen: returning to wonder");
                 break;
             case EnemyAIstates.Target:
                 enemy.destination = pursuit.Pursuit();
-              //  Debug.Log("Out of Range: Target not reachable; Continuing pursuit");
+                Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position, Color.blue);
+                //  Debug.Log("Out of Range: Target not reachable; Continuing pursuit");
                 break;
             case EnemyAIstates.Attack:
                 attack.Attacking();
-                enemy.destination = transform.position;
-             //   Debug.Log("In Range: Attacking has initiated");
+              //  enemy.destination = enemy.transform.position;
+             Debug.Log("In Range: Attacking has initiated");
                 break;
         }
         SwitchStates();
-        Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position,Color.blue);
+
+
     }
 
     private void SwitchStates()
