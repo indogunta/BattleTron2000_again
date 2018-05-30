@@ -37,6 +37,9 @@ public class EnemyAI : MonoBehaviour
     public OffsetPursuit pursuit;
     public Wonder wonder;
 
+	public float attackInterval = 4.0f;
+
+
     private void Start()
     {
         attack = GetComponent<Attack>();
@@ -65,18 +68,21 @@ public class EnemyAI : MonoBehaviour
                 Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position, Color.blue);
                 //  Debug.Log("Out of Range: Target not reachable; Continuing pursuit");
                 break;
-            case EnemyAIstates.Attack:
-                attack.Attacking();
-                enemy.isStopped = true;
-                //  enemy.destination = enemy.transform.position;
-                Debug.Log("In Range: Attacking has initiated");
+			case EnemyAIstates.Attack:
+				timer -= Time.deltaTime;
+					
+				if (timer <= 0.0f) {
+					attack.Attacking ();
+					enemy.isStopped = true;
+					//  enemy.destination = enemy.transform.position;
+					Debug.Log ("In Range: Attacking has initiated");
+
+					timer = attackInterval;
+				}
                 break;
         }
         SwitchStates();
-<<<<<<< HEAD:Assets/Kim/Scripts/EnemyAI.cs
-        Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position,Color.blue);
-=======
->>>>>>> Kim:Assets/Kim/Scripts/AI/EnemyAI.cs
+
 
 
     }

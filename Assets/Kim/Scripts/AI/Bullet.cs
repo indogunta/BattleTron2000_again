@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour, IPooledObjects
     public GameObject spawnPoint;
     public GameObject target;
 
-    public float bulletSpeed = 100f;
+    public float bulletSpeed = 1000f;
 
     private Rigidbody rb;
 
@@ -28,9 +28,9 @@ public class Bullet : MonoBehaviour, IPooledObjects
         //float xForce = transform.position.x*10;
         float zForce = 100;
 
-        Vector3 force = new Vector3(0, 0, -zForce);
+        Vector3 force = new Vector3(0, 0, zForce);
 
-        rb.AddForce(force);
+		rb.AddRelativeForce(force * bulletSpeed);
         
      
     }

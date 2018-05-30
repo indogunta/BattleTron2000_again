@@ -44,8 +44,8 @@ public class TurretMode : MonoBehaviour
 		originalQ = transform.rotation;
 		if (Input.GetAxis ("Fire2")> 0)
 		{
-			SetKinematic ();
-			RemoveKinematic ();
+			//SetKinematic ();
+			//RemoveKinematic ();
 			float h = horiz * Input.GetAxis ("Mouse X")*Time.deltaTime;
 			float v = vert * Input.GetAxis ("Mouse Y")*Time.deltaTime;
 
@@ -57,7 +57,7 @@ public class TurretMode : MonoBehaviour
 		} 
 		else 
 		{
-			RemoveKinematic ();
+			//RemoveKinematic ();
 
 			turretRotate.transform.localRotation = Quaternion.Lerp (turretRotate.transform.localRotation, Quaternion.Euler(0,-90,0), turretResetTime *Time.deltaTime);
 		}
