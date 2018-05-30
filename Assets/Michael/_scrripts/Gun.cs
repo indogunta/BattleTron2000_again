@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour {
 
-    public float damage = 10f;
-    public float range = 100f;
+
+	public float damage = 10f;
+	public float range = 100f;
 	public float bulletForce = 1000f;
 	public GameObject ammo;
 	public Rigidbody RB;
 
-	public int maxAmmo = 35;
+	[Header("audio")]
+	public AudioClip fire;
+	public AudioSource bam;
+
+	public int maxAmmo = 1;
 	private int currentAmmo;
-	public float reloadTime = 2f;
+	public float reloadTime = .5f;
 	private bool isReloading = false;
 
 	public GameObject turret;
@@ -23,6 +28,8 @@ public class Gun : MonoBehaviour {
 	{
 		currentAmmo = maxAmmo;
 		RB = GetComponent<Rigidbody>();
+
+
 	}
 
 
@@ -54,7 +61,7 @@ public class Gun : MonoBehaviour {
 			return;
 	}
 		currentAmmo--;
-
+		bam.Play ();
 		GameObject bullet = Instantiate (ammo,cannonEnd.transform.position,cannonEnd.transform.rotation);
 		Rigidbody rb = bullet.GetComponent<Rigidbody> ();
 		rb.AddForce (-transform.forward * bulletForce, ForceMode.Impulse);

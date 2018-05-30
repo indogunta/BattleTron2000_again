@@ -7,6 +7,9 @@ public class ThrusterScript : MonoBehaviour {
     public float thrusterStrength;
     public float thrusterDistance;
     public Transform[] thrusters;
+	public TrailRenderer[] trails;
+
+
 
     Rigidbody rb;
 
@@ -23,17 +26,25 @@ public class ThrusterScript : MonoBehaviour {
             Vector3 downwardForce;
             float distancePercentage;
 
-            if(Physics.Raycast (thruster.position, thruster.up * -1, out hit, thrusterDistance))
-            {
-                distancePercentage = 1 - (hit.distance / thrusterDistance);
+			if (Physics.Raycast (thruster.position, thruster.up * -1, out hit, thrusterDistance)) 
+			{
+				distancePercentage = 1 - (hit.distance / thrusterDistance);
 
-                downwardForce = transform.up * thrusterStrength * distancePercentage;
+				downwardForce = transform.up * thrusterStrength * distancePercentage;
 
-                downwardForce = downwardForce * Time.deltaTime * rb.mass;
+				downwardForce = downwardForce * Time.deltaTime * rb.mass;
 
-                rb.AddForceAtPosition(downwardForce, thruster.position);
-            }
+				rb.AddForceAtPosition (downwardForce, thruster.position);
+
+
+			}
+
+		
         }
+		foreach (TrailRenderer trail in trails)
+		{
+			trail.startColor = Color.blue;
+		}
     }
 
 }

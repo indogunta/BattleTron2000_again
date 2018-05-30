@@ -7,10 +7,14 @@ public class ResetTemp : MonoBehaviour
 {
 
 
+
 	void OnTriggerEnter()
 
 	{
-		SceneManager.LoadScene (0);
+		if (gameObject.tag == "Player") 
+		{
+			SceneManager.LoadScene (0);
+		}
 	}
 
 }

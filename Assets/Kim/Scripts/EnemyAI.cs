@@ -58,6 +58,8 @@ public class EnemyAI : MonoBehaviour
         }
         SwitchStates();
         Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position,Color.blue);
+
+
     }
 
     private void SwitchStates()

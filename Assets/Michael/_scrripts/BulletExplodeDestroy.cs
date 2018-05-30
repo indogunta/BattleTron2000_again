@@ -18,7 +18,9 @@ public class BulletExplodeDestroy : MonoBehaviour
 
 	void OnTriggerEnter()
 	{
-		Instantiate (explosion, transform.position, Quaternion.identity);
+		StartCoroutine (Explode ());
+
+
 	}
 
 	void Update()
@@ -28,7 +30,15 @@ public class BulletExplodeDestroy : MonoBehaviour
 		{
 			Destroy (gameObject.gameObject);
 
+
 		}
+	}
+	 
+	IEnumerator Explode()
+	{
+		GameObject spawnedExplosion = Instantiate (explosion, transform.position, Quaternion.identity);
+		yield return new WaitForSeconds (count);
+		Destroy (spawnedExplosion);
 	}
 
 }

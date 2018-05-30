@@ -45,6 +45,7 @@ public class TurretMode : MonoBehaviour
 		if (Input.GetAxis ("Fire2")> 0)
 		{
 			SetKinematic ();
+			RemoveKinematic ();
 			float h = horiz * Input.GetAxis ("Mouse X")*Time.deltaTime;
 			float v = vert * Input.GetAxis ("Mouse Y")*Time.deltaTime;
 
@@ -71,10 +72,6 @@ public class TurretMode : MonoBehaviour
 	{
 		rb.isKinematic = true;
 
-	
-
-
-
 			gun.maxAmmo = 5;
 			//gun.bulletForce = 100;
 
@@ -86,8 +83,6 @@ public class TurretMode : MonoBehaviour
 	
 		//originalQ = turretRotate.transform.rotation;
 
-
-	
 			gun.maxAmmo = 10;
 			//sgun.bulletForce = 1000;
 
@@ -96,8 +91,8 @@ public class TurretMode : MonoBehaviour
 
 	void OnDrawGizmos()
 	{
-		Gizmos.color = Color.white;
+		Gizmos.color = Color.green;
 
-		Gizmos.DrawRay (transform.position, originalQ * Vector3.forward * 10.0f);
+		Gizmos.DrawRay (transform.position, originalQ * Vector3.forward * 100.0f);
 	}
 }
