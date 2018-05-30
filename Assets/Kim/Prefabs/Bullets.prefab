@@ -123,4 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1277521657224260, guid: 1ecd5324c6627e444aaba0b1ff6b0494, type: 2}
   target: {fileID: 1851350219007516, guid: 90c5bcc2aa2fbad4cbf4d5b1295e2e9a, type: 2}
-  bulletSpeed: 1000
+  bulletSpeed: 10

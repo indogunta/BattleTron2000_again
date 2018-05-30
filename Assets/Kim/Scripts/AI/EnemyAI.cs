@@ -49,6 +49,7 @@ public class EnemyAI : MonoBehaviour
         switch (currentState)
         {
             case EnemyAIstates.Wander:
+                enemy.isStopped = false;
                 //enemy.destination = wonder.findNextNode();
                 if (!enemy.pathPending && enemy.remainingDistance < 0.5f)
                 {
@@ -58,14 +59,16 @@ public class EnemyAI : MonoBehaviour
                 //  Debug.Log("Player not seen: returning to wonder");
                 break;
             case EnemyAIstates.Target:
+                enemy.isStopped = false;
                 enemy.destination = pursuit.Pursuit();
                 Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position, Color.blue);
                 //  Debug.Log("Out of Range: Target not reachable; Continuing pursuit");
                 break;
             case EnemyAIstates.Attack:
                 attack.Attacking();
-              //  enemy.destination = enemy.transform.position;
-             Debug.Log("In Range: Attacking has initiated");
+                enemy.isStopped = true;
+                //  enemy.destination = enemy.transform.position;
+                Debug.Log("In Range: Attacking has initiated");
                 break;
         }
         SwitchStates();
@@ -79,14 +82,17 @@ public class EnemyAI : MonoBehaviour
         if (dis < minDis)
         {
             currentState = EnemyAIstates.Attack;
+          
         }
         else if (dis > minDis && dis < maxDis)
         {
             currentState = EnemyAIstates.Target;
+           
         }
         else
         {
             currentState = EnemyAIstates.Wander;
+            
         }
     }
 }
