@@ -19,7 +19,7 @@ public class RotateHead : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(rotateX, rotateY, rotateZ) * Time.deltaTime, Space.World);
+        transform.Rotate(new Vector3(rotateX, rotateY, rotateZ));
     }
 
 
