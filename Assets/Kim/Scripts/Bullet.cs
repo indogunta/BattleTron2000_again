@@ -7,6 +7,14 @@ public class Bullet : MonoBehaviour, IPooledObjects
     public GameObject spawnPoint;
     public GameObject target;
 
+    public float bulletSpeed = 100f;
+
+    private Rigidbody rb;
+
+    void OnObjectSpawn()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     // Use this for initialization
     public void onPooledObject()
     {
@@ -16,12 +24,14 @@ public class Bullet : MonoBehaviour, IPooledObjects
     // Update is called once per frame
     void Update()
     {
+        OnObjectSpawn();
+        //float xForce = transform.position.x*10;
+        float zForce = 100;
 
-        float xForce = target.transform.position.x;
-        float zForce = transform.transform.position.z;
+        Vector3 force = new Vector3(0, 0, -zForce);
 
-        Vector3 force = new Vector3(xForce, 0, zForce);
-
-        GetComponent<Rigidbody>().AddForce(force);
+        rb.AddForce(force);
+        
+     
     }
 }
