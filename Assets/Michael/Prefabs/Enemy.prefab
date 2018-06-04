@@ -59211,8 +59211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7130865a1c3a1654abd9b9bd76c03312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDis: 200
-  maxDis: 2000
+  minDis: 20
+  maxDis: 200
   enemy: {fileID: 195379071350193040}
   player: {fileID: 0}
   attack: {fileID: 114458102169358716}
