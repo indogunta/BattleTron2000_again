@@ -42,7 +42,6 @@ public class EnemyAI : MonoBehaviour
         attack = GetComponent<Attack>();
         pursuit = GetComponent<OffsetPursuit>();
         wonder = GetComponent<Wonder>();
-
     }
 
     private void Update()
@@ -51,32 +50,24 @@ public class EnemyAI : MonoBehaviour
         {
             case EnemyAIstates.Wander:
                 enemy.isStopped = false;
-                //enemy.destination = wonder.findNextNode();
                 if (!enemy.pathPending && enemy.remainingDistance < 0.5f)
                 {
                     wonder.NextPoint();
                 }
-                //Debug.DrawLine(wonder.Wandering(), enemy.gameObject.transform.position, Color.red);
-                //  Debug.Log("Player not seen: returning to wonder");
+      
                 break;
             case EnemyAIstates.Target:
                 enemy.isStopped = false;
                 enemy.destination = pursuit.Pursuit();
-                Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position, Color.blue);
-                //  Debug.Log("Out of Range: Target not reachable; Continuing pursuit");
+             
                 break;
             case EnemyAIstates.Attack:
                 attack.Attacking();
                 enemy.isStopped = true;
-                //  enemy.destination = enemy.transform.position;
-                Debug.Log("In Range: Attacking has initiated");
+              
                 break;
         }
         SwitchStates();
-<<<<<<< HEAD:Assets/Kim/Scripts/EnemyAI.cs
-        Debug.DrawLine(enemy.destination, enemy.gameObject.transform.position,Color.blue);
-=======
->>>>>>> Kim:Assets/Kim/Scripts/AI/EnemyAI.cs
 
 
     }

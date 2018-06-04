@@ -6,9 +6,6 @@ public class Bullet : MonoBehaviour, IPooledObjects
 {
     public GameObject spawnPoint;
     public GameObject target;
-
-    public float bulletSpeed = 100f;
-
     private Rigidbody rb;
 
     void OnObjectSpawn()
@@ -25,7 +22,6 @@ public class Bullet : MonoBehaviour, IPooledObjects
     void Update()
     {
         OnObjectSpawn();
-        //float xForce = transform.position.x*10;
         float zForce = 100;
 
         Vector3 force = new Vector3(0, 0, -zForce);
