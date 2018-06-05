@@ -64,7 +64,7 @@ public class EnemyAI : MonoBehaviour
                 enemy.destination = pursuit.Pursuit();
              
                 break;
-<<<<<<< HEAD
+
 			case EnemyAIstates.Attack:
 				timer -= Time.deltaTime;
 					
@@ -77,18 +77,13 @@ public class EnemyAI : MonoBehaviour
 					timer = attackInterval;
 				}
                 break;
+        
+      	  SwitchStates();
+
+
         }
         SwitchStates();
 
-=======
-            case EnemyAIstates.Attack:
-                attack.Attacking();
-                enemy.isStopped = true;
-              
-                break;
-        }
-        SwitchStates();
->>>>>>> kim
 
 
     }
