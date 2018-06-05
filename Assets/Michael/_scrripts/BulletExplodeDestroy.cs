@@ -9,6 +9,7 @@ public class BulletExplodeDestroy : MonoBehaviour
 	public GameObject explosion;
 	public GameObject me;
 
+
 	 public float count;
 
 	void OnObjectSpawn()
@@ -16,12 +17,16 @@ public class BulletExplodeDestroy : MonoBehaviour
 		me = GetComponent<GameObject>();
 	}
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider other)
 	{
+        
+        Health health = other.GetComponent<Health>();
 		StartCoroutine (Explode ());
-
-
-	}
+        if (health != null)
+        {
+            health.currentHealth -= 1;
+        }
+    }
 
 	void Update()
 	{
@@ -29,7 +34,7 @@ public class BulletExplodeDestroy : MonoBehaviour
 		if (count <= 0f) 
 		{
 			Destroy (gameObject.gameObject);
-
+            
 
 		}
 	}

@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4500d5f25264c404bab77dd026bf37a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 1648062864487640, guid: 50848f69cf981bc47a9c53e55d17dc7f, type: 2}
+  explosion: {fileID: 0}
   me: {fileID: 1237290428166096}
   count: 4
 --- !u!135 &135266410990863136
