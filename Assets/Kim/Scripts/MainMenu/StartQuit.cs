@@ -19,4 +19,9 @@ public class StartQuit : MonoBehaviour
     {
         SceneManager.LoadScene(load);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

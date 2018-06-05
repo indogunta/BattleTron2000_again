@@ -12,6 +12,10 @@ public class Bullet : MonoBehaviour, IPooledObjects
     {
         rb = GetComponent<Rigidbody>();
     }
+    void Start()
+    {
+        OnObjectSpawn();
+    }
     // Use this for initialization
     public void onPooledObject()
     {
@@ -21,12 +25,12 @@ public class Bullet : MonoBehaviour, IPooledObjects
     // Update is called once per frame
     void Update()
     {
-        OnObjectSpawn();
+        
         float zForce = 100;
 
         Vector3 force = new Vector3(0, 0, -zForce);
 
-        rb.AddForce(force);
+        rb.AddForce(force, ForceMode.Impulse);
         
      
     }
