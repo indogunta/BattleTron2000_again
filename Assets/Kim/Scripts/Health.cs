@@ -11,6 +11,9 @@ public class Health : MonoBehaviour
     private int maxHealth;
     public int currentHealth;
 
+    public GameObject destructable;
+    public Transform destructableSpawnPoint;
+
 
     private void Start()
     {
@@ -38,6 +41,14 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            Instantiate(destructable, destructableSpawnPoint.transform.position, destructableSpawnPoint.transform.rotation );
+            StartCoroutine(KillParts());
         }
+    }
+
+    IEnumerator KillParts()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(destructable.gameObject.gameObject);
     }
 }

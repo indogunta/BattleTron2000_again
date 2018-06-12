@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54568864764350978}
   - component: {fileID: 135266410990863136}
   - component: {fileID: 108004189375490296}
-  - component: {fileID: 114884748880944236}
+  - component: {fileID: 114674687539275146}
   m_Layer: 0
   m_Name: bullet 1
   m_TagString: Bullets
@@ -41,7 +41,7 @@ Transform:
   m_GameObject: {fileID: 1237290428166096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1961.2924, y: 425.80402, z: -1356.9028}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -150,7 +150,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114884748880944236
+--- !u!114 &114674687539275146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -158,12 +158,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1237290428166096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95a5da7dadf73704582c0ba1571de2bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 4500d5f25264c404bab77dd026bf37a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  target: {fileID: 0}
-  bulletSpeed: 50
+  explosion: {fileID: 0}
+  me: {fileID: 0}
+  count: 0
 --- !u!135 &135266410990863136
 SphereCollider:
   m_ObjectHideFlags: 1

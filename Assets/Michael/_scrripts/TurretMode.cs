@@ -6,8 +6,9 @@ public class TurretMode : MonoBehaviour
 {
 
 	private Rigidbody rb;
-	private Camera cam;
+	public Camera cam;
 
+    public Camera followCam;
 
 	[Header("s e n s i t i v i t i e s ")]
 	public float horiz = 200f;
@@ -23,7 +24,7 @@ public class TurretMode : MonoBehaviour
 	public float turretResetTime = .5f;
 
 
-	public Light light;
+	//public Light light;
 
 
 	public Gun gun;
@@ -33,7 +34,7 @@ public class TurretMode : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody> ();
 		//gun = GetComponent<Gun> ();
-		cam = GetComponent<Camera> ();
+		//cam = GetComponent<Camera> ();
 		originalQ = turretRotate.transform.rotation;
 
 	}
@@ -44,6 +45,8 @@ public class TurretMode : MonoBehaviour
 		originalQ = transform.rotation;
 		if (Input.GetAxis ("Fire2")> 0)
 		{
+            cam.enabled = true;
+            followCam.enabled = false;
 			//SetKinematic ();
 			//RemoveKinematic ();
 			float h = horiz * Input.GetAxis ("Mouse X")*Time.deltaTime;
@@ -57,23 +60,21 @@ public class TurretMode : MonoBehaviour
 		} 
 		else 
 		{
-			//RemoveKinematic ();
+            followCam.enabled = true;
+            cam.enabled = false;
+            //RemoveKinematic ();
+            turretRotate.transform.localRotation = Quaternion.Lerp (turretRotate.transform.localRotation, Quaternion.Euler(0,-90,0), turretResetTime *Time.deltaTime);
 
-			turretRotate.transform.localRotation = Quaternion.Lerp (turretRotate.transform.localRotation, Quaternion.Euler(0,-90,0), turretResetTime *Time.deltaTime);
+
 		}
 
 
-			//float lightalter  = Input.GetAxis ("Mouse ScrollWheel");
-		//Debug.Log (lightalter);
-	//light.intensity += light.intensity * lightalter *10;
+		
 	}
 
 	void SetKinematic()
 	{
 		rb.isKinematic = true;
-
-			gun.maxAmmo = 5;
-			//gun.bulletForce = 100;
 
 
 	}
@@ -81,11 +82,6 @@ public class TurretMode : MonoBehaviour
 	{
 		rb.isKinematic = false;
 	
-		//originalQ = turretRotate.transform.rotation;
-
-			gun.maxAmmo = 10;
-			//sgun.bulletForce = 1000;
-
 
 	}
 

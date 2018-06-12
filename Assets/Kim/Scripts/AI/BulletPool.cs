@@ -11,8 +11,12 @@ public class BulletPool : MonoBehaviour
     {
         public string tag; 
         public GameObject prefab;
-        public int size;
-
+        public int MaxNumberOfObjects;
+        public Rigidbody rigidBody;
+        //public Pool(Rigidbody rb)
+        //{
+        //    rigidBody = rb;
+        //}
       
     }
 
@@ -21,7 +25,7 @@ public class BulletPool : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+       BulletPool. Instance = this;
     }
 
 #endregion
@@ -31,14 +35,16 @@ public class BulletPool : MonoBehaviour
 
     void Start()
     {
-		//Invoke ("SpawnFromPool", 3);
+	
 
         Bullets = new Dictionary<string, Queue<GameObject>>();
         foreach(Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
-            for(int i = 0; i < pool.size; i++)
+            pool.rigidBody = pool.prefab.GetComponent<Rigidbody>();
+            for(int i = 0; i < pool.MaxNumberOfObjects; i++)
             {
+               
                 GameObject obj = Instantiate(pool.prefab);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
@@ -60,6 +66,7 @@ public class BulletPool : MonoBehaviour
             Debug.LogWarning("Pool with tag " + tag + " Does not exsit" );
             return null;
         }
+	//	Debug.Log (System.Environment.StackTrace);
         GameObject objToSpawn = Bullets[tag].Dequeue();
         objToSpawn.SetActive(true);
         objToSpawn.transform.position = position;

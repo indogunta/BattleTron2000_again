@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Michael/dwork.unity
-    guid: 92ab70e8fab4c5b448c738c07daf45ff
-  - enabled: 0
     path: Assets/Kim/Scenes/Main.unity
     guid: b066363d73622a84ba22dd454fd16a06
+  - enabled: 1
+    path: Assets/Michael/dwork.unity
+    guid: 92ab70e8fab4c5b448c738c07daf45ff
   - enabled: 0
     path: Assets/Kim/Scenes/work.unity
     guid: 9b62833f67e687c46aa3966c7a139072

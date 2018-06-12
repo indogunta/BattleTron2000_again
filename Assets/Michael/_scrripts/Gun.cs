@@ -62,9 +62,12 @@ public class Gun : MonoBehaviour {
 	}
 		currentAmmo--;
 		bam.Play ();
-		GameObject bullet = Instantiate (ammo,cannonEnd.transform.position,cannonEnd.transform.rotation);
-		Rigidbody rb = bullet.GetComponent<Rigidbody> ();
-		rb.AddForce (-transform.forward * bulletForce, ForceMode.Impulse);
+     //   BulletPool.Instance.SpawnFromPool("Boollay", transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate (ammo,cannonEnd.transform.position,cannonEnd.transform.rotation);
+
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+
+        rb.AddForce (-transform.forward * bulletForce, ForceMode.Impulse);
     }
 
 

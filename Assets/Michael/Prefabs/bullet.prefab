@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 108004189375490296}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: Boolay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.28546712, g: 0.68848574, b: 0.7058823, a: 1}
-  m_Intensity: 3
+  m_Intensity: 10
   m_Range: 200
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -131,7 +131,7 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1.5
+  m_BounceIntensity: 5
   m_FalloffTable:
     m_Table[0]: 0
     m_Table[1]: 0
@@ -174,7 +174,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.74
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135946071087893068
 SphereCollider:
@@ -184,7 +184,7 @@ SphereCollider:
   m_GameObject: {fileID: 1237290428166096}
   m_Material: {fileID: 13400000, guid: 5da5c4ca6535a964eba88a498ed71ccd, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
