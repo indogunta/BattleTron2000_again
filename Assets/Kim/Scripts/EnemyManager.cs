@@ -1,24 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyManager : MonoBehaviour
 {
     public Health enemyHealth;
     public PlayerManager player;
 
-    public int points;
+    [SerializeField]
+    private Text pointsUI;
+
+    [SerializeField]
+    private int enemyWorth;
     // Use this for initialization
     void Start()
     {
         player.playerPoints += AddPoints;
     }
 
-    void AddPoints(int points)
+    void AddPoints(int updatePoints)
     {
-        if(enemyHealth.currentHealth < 1 && player != null)
+        if(enemyHealth.currentHealth <= 0 /*&& player != null*/)
         {
-            player.currentPoints += points;
+            updatePoints += enemyWorth;
+            pointsUI.text = "Points: " + updatePoints;
         }
     }
 

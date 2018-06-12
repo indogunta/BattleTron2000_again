@@ -28,8 +28,8 @@ public class EnemyAI : MonoBehaviour
 
     private EnemyAIstates currentState;
 
-    [SerializeField]
-    private Transform player;
+   // [SerializeField]
+    public Transform player { private set; get; }
 
     [SerializeField]
     public Attack attack;
@@ -39,6 +39,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         attack = GetComponent<Attack>();
         pursuit = GetComponent<OffsetPursuit>();
         wonder = GetComponent<Wonder>();
@@ -78,17 +79,18 @@ public class EnemyAI : MonoBehaviour
         if (dis < minDis)
         {
             currentState = EnemyAIstates.Attack;
+            Debug.Log("Attack");
           
         }
         else if (dis > minDis && dis < maxDis)
         {
             currentState = EnemyAIstates.Target;
-           
+            Debug.Log("Target");
         }
         else
         {
             currentState = EnemyAIstates.Wander;
-            
+            Debug.Log("Wander");
         }
     }
 }

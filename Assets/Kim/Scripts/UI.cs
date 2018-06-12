@@ -8,23 +8,15 @@ public class UI : MonoBehaviour
     public PlayerManager playerPoints;
     public Health playerHealth;
 
+  
     [SerializeField]
-    private Text pointsUI;
-    [SerializeField]
-    private Slider healthUI;
+    private Image healthUI;
     private void Start()
     {
-        playerPoints.playerPoints += UpdatePointUI;
         playerHealth.everyonesHealth += UpdateHealthUI;
     }
-
-    void UpdatePointUI(int points)
-    {
-        pointsUI.text = "Points: " + points;
-    }
-
     void UpdateHealthUI(int currentHealth)
     {
-        healthUI.value = currentHealth;
+        healthUI.fillAmount = 1 / playerHealth.maxHealth * (currentHealth);
     }
 }

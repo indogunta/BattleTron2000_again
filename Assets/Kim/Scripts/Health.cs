@@ -7,8 +7,8 @@ public class Health : MonoBehaviour
 
     public delegate void EveryonesHealth(int currentHealth);
     public EveryonesHealth everyonesHealth;
-    [SerializeField]
-    private int maxHealth;
+
+    public int maxHealth;
     public int currentHealth;
 
 
@@ -17,12 +17,10 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void Update()
+    public void BeenHit(int Damage)
     {
-        if (everyonesHealth != null)
-        {
-            everyonesHealth(currentHealth);
-        }
+        currentHealth -= Damage;
+        everyonesHealth(currentHealth);
         currentHealth = ClampedHealth();
         Death();
     }
@@ -37,6 +35,8 @@ public class Health : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            ListOfQuests.Instance.AllQuests[ListOfQuests.Instance.questIndex].CheckTargets(gameObject);
+
             Destroy(gameObject);
         }
     }

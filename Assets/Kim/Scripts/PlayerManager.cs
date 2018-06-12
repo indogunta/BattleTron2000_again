@@ -7,10 +7,13 @@ public class PlayerManager : MonoBehaviour
     public delegate void PlayerPoints(int points);
     public PlayerPoints playerPoints;
 
-    public int currentPoints;
+    public int currentPoints = 0;
 
-    public void Update()
+      public void Update()
     {
-        playerPoints(currentPoints);
+        if (playerPoints != null)
+        {
+            playerPoints(currentPoints);
+        }
     }
 }

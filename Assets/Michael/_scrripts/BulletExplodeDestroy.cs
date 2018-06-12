@@ -9,7 +9,6 @@ public class BulletExplodeDestroy : MonoBehaviour
 	public GameObject explosion;
 	public GameObject me;
 
-
 	 public float count;
 
 	void OnObjectSpawn()
@@ -24,7 +23,9 @@ public class BulletExplodeDestroy : MonoBehaviour
 		StartCoroutine (Explode ());
         if (health != null)
         {
-            health.currentHealth -= 1;
+            //health.currentHealth -= 1;
+            health.BeenHit(1);
+
         }
     }
 
