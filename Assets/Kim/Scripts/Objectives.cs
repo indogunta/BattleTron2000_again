@@ -9,23 +9,26 @@ public class clsTargetTags
 {
     public string tag;
     public int qty;
-    public int killcount;
+    public int killCount;
 }
 
 [System.Serializable]
 public class Objectives
 {
     public string quest; // the name of the quest
-    [SerializeField]
 
     [Header("Target Info")]
     public clsTargetTags[] TargetTags;
     public List<GameObject> myTargets; // sets the target of the the quest
+
+    [Header("Bools")]
+    public bool isGameObject = false;
     public bool isTimed = false; //Allows you to choose if the quest has a timer or not
-    private bool _isComplete = false; 
-    private bool startedQuest = false;
+
     [Header("Timer")]
     public float timer;
+     private bool _isComplete = false;
+    private bool startedQuest = false;
 
     public bool StartedQuest
     {
@@ -33,12 +36,12 @@ public class Objectives
         set
         {
             startedQuest = value;
-            if(!startedQuest)
+            if (!startedQuest)
             {
                 return;
             }
 
-            if(isTimed)
+            if (isTimed)
             {
                 ListOfQuests.Instance.startCountDown(timer);
             }
@@ -47,10 +50,10 @@ public class Objectives
     [SerializeField]
     public bool IsComplete
     {
-        get { return _isComplete;}
+        get { return _isComplete; }
         set
         {
-            if(value)
+            if (value)
             {
                 startedQuest = false;
             }
@@ -60,10 +63,24 @@ public class Objectives
 
     public void CheckTargets(GameObject target)
     {
-        TargetTags.First<clsTargetTags>((x) => x.tag == target.tag).killcount++;
+        if (TargetTags != null && TargetTags.Length > 0)
+        {
+            TargetTags.First<clsTargetTags>((x) => x.tag == target.tag).killCount++;
+             if(TargetTags.First<clsTargetTags>().killCount == TargetTags.First<clsTargetTags>().qty)
+            {
+                ListOfQuests.Instance.QuestCompleted();
+            }
+        }
         myTargets.Remove(target);
+        if (isGameObject)
+        {
+            ListOfQuests.Instance.destroyedObject();
+        }
+
+            ListOfQuests.Instance.quitCountDown = true;
+        
         
     }
-    
+
 }
    

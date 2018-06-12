@@ -10,7 +10,7 @@ public class Attack : MonoBehaviour
 
     public void Start()
     {
-        target = AI.player.transform;
+        //target = AI.player.transform;
     }
     public void Attacking()
     {

@@ -42,7 +42,6 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
         attack = GetComponent<Attack>();
         pursuit = GetComponent<OffsetPursuit>();
         wonder = GetComponent<Wonder>();
@@ -78,20 +77,16 @@ public class EnemyAI : MonoBehaviour
 					timer = attackInterval;
 				}
                 break;
-        
-      	  SwitchStates();
-
-
         }
         SwitchStates();
-
-
-
     }
 
     private void SwitchStates()
     {
-        dis = Vector3.Distance(enemy.transform.position, player.position);
+        if (player != null)
+        {
+            dis = Vector3.Distance(enemy.transform.position, player.position);
+        
         if (dis < minDis)
         {
             currentState = EnemyAIstates.Attack;
@@ -107,6 +102,7 @@ public class EnemyAI : MonoBehaviour
         {
             currentState = EnemyAIstates.Wander;
             Debug.Log("Wander");
+        }
         }
     }
 }
