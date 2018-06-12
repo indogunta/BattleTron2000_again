@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour, IPooledObjects
 {
     public GameObject spawnPoint;
     public GameObject target;
+
     private Rigidbody rb;
 
     void OnObjectSpawn()
@@ -28,9 +29,11 @@ public class Bullet : MonoBehaviour, IPooledObjects
         
         float zForce = 100;
 
-        Vector3 force = new Vector3(0, 0, -zForce);
+        Vector3 force = new Vector3(0, 0, zForce);
+
 
         rb.AddForce(force, ForceMode.Impulse);
+
         
      
     }

@@ -37,6 +37,9 @@ public class EnemyAI : MonoBehaviour
     public OffsetPursuit pursuit;
     public Wonder wonder;
 
+	public float attackInterval = 4.0f;
+
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -62,13 +65,26 @@ public class EnemyAI : MonoBehaviour
                 enemy.destination = pursuit.Pursuit();
              
                 break;
-            case EnemyAIstates.Attack:
-                attack.Attacking();
-                enemy.isStopped = true;
-              
+
+			case EnemyAIstates.Attack:
+				timer -= Time.deltaTime;
+					
+				if (timer <= 0.0f) {
+					attack.Attacking ();
+					enemy.isStopped = true;
+					//  enemy.destination = enemy.transform.position;
+					Debug.Log ("In Range: Attacking has initiated");
+
+					timer = attackInterval;
+				}
                 break;
+        
+      	  SwitchStates();
+
+
         }
         SwitchStates();
+
 
 
     }
