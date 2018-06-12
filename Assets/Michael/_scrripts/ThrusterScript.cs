@@ -7,7 +7,7 @@ public class ThrusterScript : MonoBehaviour {
     public float thrusterStrength;
     public float thrusterDistance;
     public Transform[] thrusters;
-	public TrailRenderer[] trails;
+
 
 
 
@@ -26,7 +26,7 @@ public class ThrusterScript : MonoBehaviour {
             Vector3 downwardForce;
             float distancePercentage;
 
-			if (Physics.Raycast (thruster.position, thruster.up * -1, out hit, thrusterDistance)) 
+			if (Physics.Raycast (thruster.position, Vector3.up * -1, out hit, thrusterDistance)) 
 			{
 				distancePercentage = 1 - (hit.distance / thrusterDistance);
 
@@ -41,10 +41,7 @@ public class ThrusterScript : MonoBehaviour {
 
 		
         }
-		foreach (TrailRenderer trail in trails)
-		{
-			trail.startColor = Color.blue;
-		}
+	
     }
 
 }

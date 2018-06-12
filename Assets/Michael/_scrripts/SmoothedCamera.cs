@@ -13,7 +13,7 @@ public class SmoothedCamera : MonoBehaviour {
 	void Update () {
 
         Vector3 targetpos = target.position + offset;
-        Vector3 desiredPos = Vector3.Slerp(transform.position, targetpos, Time.deltaTime * smoothSpeed);
+        Vector3 desiredPos = Vector3.Lerp(transform.position, targetpos, Time.deltaTime * smoothSpeed);
         transform.position = desiredPos;
 
         transform.LookAt(target);

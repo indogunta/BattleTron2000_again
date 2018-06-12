@@ -77,6 +77,8 @@ public class EnemyAI : MonoBehaviour
 					timer = attackInterval;
 				}
                 break;
+
+
         }
         SwitchStates();
     }
