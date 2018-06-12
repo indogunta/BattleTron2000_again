@@ -78,7 +78,7 @@ public class EnemyAI : MonoBehaviour
 				}
                 break;
         
-      	  SwitchStates();
+      	  //SwitchStates();
 
 
         }

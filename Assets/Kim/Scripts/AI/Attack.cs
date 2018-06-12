@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+
+    public GameObject ammo;
+    public Transform cannonEnd;
+    public float bulletForce = 400f;
+    public AudioSource bam;
     public void Attacking()
     {
+ 
+        Shoot();
+    }
 
-        GameObject bullet = (GameObject)BulletPool.Instance.SpawnFromPool("Bullets", transform.position, Quaternion.identity);
+    void Shoot()
+    {
+        GameObject bullet = Instantiate(ammo, cannonEnd.transform.position, cannonEnd.transform.rotation);
 
-        Instantiate(bullet);
-        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 4000 ,ForceMode.Impulse);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+
+        rb.AddForce(transform.forward * bulletForce, ForceMode.Impulse);
+
+        bam.Play();
     }
 
 }

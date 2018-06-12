@@ -293,9 +293,9 @@ MonoBehaviour:
     value: 1
   diffusion:
     overrideState: 1
-    value: 8.3
+    value: 5.39
   anamorphicRatio:
-    overrideState: 0
+    overrideState: 1
     value: 1
   color:
     overrideState: 0
@@ -307,8 +307,8 @@ MonoBehaviour:
     overrideState: 0
     value: {fileID: 0}
   dirtIntensity:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 56.21
 --- !u!114 &114692454938810338
 MonoBehaviour:
   m_ObjectHideFlags: 3

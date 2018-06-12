@@ -19,12 +19,14 @@ public class BulletExplodeDestroy : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-        
-        Health health = other.GetComponent<Health>();
-		StartCoroutine (Explode ());
-        if (health != null)
+        if (other.CompareTag("Enemy"))
         {
-            health.currentHealth -= 1;
+            Health health = other.GetComponent<Health>();
+            StartCoroutine(Explode());
+            if (health != null)
+            {
+                health.currentHealth -= 1;
+            }
         }
     }
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Gun : MonoBehaviour {
 
 
-	public float damage = 10f;
-	public float range = 100f;
+	//public float damage = 10f;
+	//public float range = 100f;
 	public float bulletForce = 1000f;
 	public GameObject ammo;
 	public Rigidbody RB;

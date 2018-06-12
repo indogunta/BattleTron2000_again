@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54568864764350978}
   - component: {fileID: 135266410990863136}
   - component: {fileID: 108004189375490296}
-  - component: {fileID: 114674687539275146}
+  - component: {fileID: 114220167289902538}
   m_Layer: 0
   m_Name: bullet 1
   m_TagString: Bullets
@@ -150,7 +150,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114674687539275146
+--- !u!114 &114220167289902538
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -158,12 +158,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1237290428166096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4500d5f25264c404bab77dd026bf37a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f55e597f62f2ce418b047d566120a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
+  explosion: {fileID: 1648062864487640, guid: 50848f69cf981bc47a9c53e55d17dc7f, type: 2}
   me: {fileID: 0}
-  count: 0
+  count: 3
 --- !u!135 &135266410990863136
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -174,7 +174,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 1.42
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135946071087893068
 SphereCollider:
