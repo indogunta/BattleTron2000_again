@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 223562231195549688}
   - component: {fileID: 114004272870965268}
   - component: {fileID: 114042881593661446}
-  - component: {fileID: 114573089953519092}
   - component: {fileID: 114079116212001362}
   m_Layer: 8
   m_Name: UI
@@ -114,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7662853, g: 0.97794116, b: 0.28043905, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -155,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.44880155, g: 0.97794116, b: 0.280439, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -176,21 +175,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: 0'
---- !u!114 &114573089953519092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329590470909976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c35b20d4fbde340921dc970e03f61e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  enemyHealthUI: {fileID: 0}
-  enemyCanvas: {fileID: 0}
-  player: {fileID: 0}
 --- !u!222 &222428924706944754
 CanvasRenderer:
   m_ObjectHideFlags: 1
