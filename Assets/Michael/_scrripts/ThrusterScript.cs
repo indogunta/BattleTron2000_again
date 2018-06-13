@@ -8,7 +8,7 @@ public class ThrusterScript : MonoBehaviour {
     public float thrusterDistance;
     public Transform[] thrusters;
 
-
+    public LayerMask mask;
 
 
     Rigidbody rb;
@@ -26,7 +26,7 @@ public class ThrusterScript : MonoBehaviour {
             Vector3 downwardForce;
             float distancePercentage;
 
-			if (Physics.Raycast (thruster.position, Vector3.up * -1, out hit, thrusterDistance)) 
+			if (Physics.Raycast (thruster.position, Vector3.up * -1, out hit, thrusterDistance, mask)) 
 			{
 				distancePercentage = 1 - (hit.distance / thrusterDistance);
 
@@ -36,6 +36,7 @@ public class ThrusterScript : MonoBehaviour {
 
 				rb.AddForceAtPosition (downwardForce, thruster.position);
 
+                Debug.DrawLine(thruster.position, hit.point);
 
 			}
 

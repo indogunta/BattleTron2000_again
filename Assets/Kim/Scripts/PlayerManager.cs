@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public delegate void PlayerPoints(int points);
     public PlayerPoints playerPoints;
+    public EnemyManager enemy;
 
     public int currentPoints = 0;
 
@@ -15,5 +16,10 @@ public class PlayerManager : MonoBehaviour
         {
             playerPoints(currentPoints);
         }
+    }
+
+    public void AddPoints()
+    {
+        currentPoints += enemy.enemyWorth;
     }
 }
