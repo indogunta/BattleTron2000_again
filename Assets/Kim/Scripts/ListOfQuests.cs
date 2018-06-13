@@ -28,7 +28,7 @@ public class ListOfQuests : MonoBehaviour
     public void QuestCompleted()
     {
 
-        if (questIndex < AllQuests.Count)
+        if (questIndex < AllQuests.Count -1)
         {
             
             AllQuests[questIndex].IsComplete = true;
