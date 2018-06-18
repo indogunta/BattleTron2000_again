@@ -77,7 +77,7 @@ public class TankEngine : MonoBehaviour {
     }
     void FindWaypointDist()
     {
-        if (Vector3.Distance(transform.position, nodes[currentnode].position) < 10f)
+        if (Vector3.Distance(transform.position, nodes[currentnode].position) < 40f)
         {
             if (currentnode == nodes.Count - 1)
             {

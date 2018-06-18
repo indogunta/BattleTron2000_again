@@ -65,9 +65,9 @@ public class Gun : MonoBehaviour {
      //   BulletPool.Instance.SpawnFromPool("Boollay", transform.position, Quaternion.identity);
         GameObject bullet = Instantiate (ammo,cannonEnd.transform.position,cannonEnd.transform.rotation);
 
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+       // Rigidbody rb = bullet.GetComponent<Rigidbody>();
 
-        rb.AddForce (-transform.forward * bulletForce, ForceMode.Impulse);
+       // rb.AddForce (transform.forward * bulletForce, ForceMode.Impulse);
     }
 
 

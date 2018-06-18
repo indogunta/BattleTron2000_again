@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33048841547010088}
   - component: {fileID: 23623904091976476}
   - component: {fileID: 64686871315711348}
-  - component: {fileID: 54311895920803758}
   m_Layer: 0
   m_Name: SuperBoyd_air_car_thingie_02_destruct (1)
   m_TagString: Untagged
@@ -286,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174017718093992}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2548.9585, y: -0.013379091, z: -2209.39}
+  m_LocalPosition: {x: 1966.2189, y: 192.20424, z: -1474.4224}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4981394772439022}
@@ -385,7 +384,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -417,7 +416,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -449,7 +448,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -481,7 +480,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -513,7 +512,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -545,7 +544,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -577,7 +576,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -609,7 +608,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -641,7 +640,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92ebd1ba61cbaed40ada64e44d6358ee, type: 2}
+  - {fileID: 2100000, guid: e8f42d0ba19620d4dae4b7bed76823da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -730,21 +729,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316825352489684}
   m_Mesh: {fileID: 4300006, guid: 5a354f9713927a34d9c9b93f3a0e8d47, type: 3}
---- !u!54 &54311895920803758
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1174017718093992}
-  serializedVersion: 2
-  m_Mass: 122
-  m_Drag: 0
-  m_AngularDrag: 0.01
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &54399889361094090
 Rigidbody:
   m_ObjectHideFlags: 1
