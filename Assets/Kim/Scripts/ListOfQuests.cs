@@ -9,10 +9,11 @@ public class ListOfQuests : MonoBehaviour
     public delegate void delTimerCompleted();
 
     public List<Objectives> AllQuests;
-    [Header("End of List")]
+   
 
     public static ListOfQuests Instance; 
 
+    [Header("End of List")]
     public int questIndex = 0; //keeps track as to what quest the player is on
 
     public Text questTimer;
