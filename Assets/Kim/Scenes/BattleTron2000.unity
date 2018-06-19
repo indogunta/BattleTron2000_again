@@ -3877,6 +3877,91 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2f1051b5a763f241978e142ca9eccc2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &878757880 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1931679288833452, guid: f0024f8d43ff84e40a3da77b305bfe11,
+    type: 2}
+  m_PrefabInternal: {fileID: 1149181686}
+--- !u!82 &878757886
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878757880}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &888518800 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1a311f225457e0244805cd318959929a, type: 3}
@@ -6928,7 +7013,7 @@ Prefab:
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
       propertyPath: AllQuests.Array.data[0].myTargets.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224146251794408596, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
@@ -7033,12 +7118,12 @@ Prefab:
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
       propertyPath: AllQuests.Array.data[0].isTimed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
       propertyPath: AllQuests.Array.data[0].isGameObject
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114334818856148510, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
@@ -7095,6 +7180,26 @@ Prefab:
       propertyPath: AllQuests.Array.data[2].isGameObject
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[0].backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f063ee280874544a85b100aeb5f90e3, type: 3}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[1].backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 40bf4375feb141343ae3343657349ee9, type: 3}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[2].backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 61c5648d8ef07944e8c1f73ee1dfbf2c, type: 3}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: Source
+      value: 
+      objectReference: {fileID: 878757886}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0024f8d43ff84e40a3da77b305bfe11, type: 2}
   m_IsPrefabParent: 0

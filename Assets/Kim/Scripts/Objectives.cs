@@ -17,6 +17,7 @@ public class Objectives
 {
     public string quest; // the name of the quest also affects the UI for the quest name
 
+    public AudioClip backgroundMusic;
     [Header("Target Info")]
     public clsTargetTags[] TargetTags; //use this if the player is to go to a destenation or if it does not matter what the player is attacking
     public List<GameObject> myTargets; // sets the target of the the quest
@@ -27,12 +28,13 @@ public class Objectives
 
     [Header("Timer")]
     public float timer;
-     private bool _isComplete = false;
+
+    
+
+    [Header("--E--------N--------D--")]
+    [SerializeField]
+    private bool _isComplete = false;
     private bool startedQuest = false;
-
-   
-
-   
 
     public bool StartedQuest //if the quest isComplete then start the next one
     {
@@ -44,6 +46,7 @@ public class Objectives
             {
                 return;
             }
+            ListOfQuests.Instance.Source.PlayOneShot(backgroundMusic, 1f);
 
             if (isTimed)
             {
@@ -57,6 +60,7 @@ public class Objectives
         get { return _isComplete; }
         set
         {
+          
             if (value)
             {
                 startedQuest = false;

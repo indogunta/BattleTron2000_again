@@ -9,7 +9,8 @@ public class ListOfQuests : MonoBehaviour
     public delegate void delTimerCompleted();
 
     public List<Objectives> AllQuests;
-   
+
+    public AudioSource Source;
 
     public static ListOfQuests Instance; 
 
@@ -25,6 +26,7 @@ public class ListOfQuests : MonoBehaviour
 
     public void Start()
     {
+       
         ListOfQuests.Instance = this;
         AllQuests[0].StartedQuest = true; //makes the first quest start instantly
         quest.text = AllQuests[0].quest; //sets the name of the quest to the UI
