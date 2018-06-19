@@ -5,71 +5,65 @@ using UnityEngine.UI;
 
 public class ListOfQuests : MonoBehaviour
 {
-    
+
+    public delegate void delTimerCompleted();
+
     public List<Objectives> AllQuests;
     [Header("End of List")]
 
-    public static ListOfQuests Instance;
+    public static ListOfQuests Instance; 
 
-    public int questIndex = 0;
+    public int questIndex = 0; //keeps track as to what quest the player is on
 
     public Text questTimer;
     public Text quest;
 
     public bool quitCountDown = false;
-    bool skip = false;
+
+    public delTimerCompleted TimerCompleted;
+
     public void Start()
     {
         ListOfQuests.Instance = this;
-        AllQuests[0].StartedQuest = true;
-        quest.text = AllQuests[0].quest;
+        AllQuests[0].StartedQuest = true; //makes the first quest start instantly
+        quest.text = AllQuests[0].quest; //sets the name of the quest to the UI
     }
 
-    public void QuestCompleted()
+    public void QuestCompleted() //completes the quest
     {
-
+        AllQuests[questIndex].IsComplete = true;
         if (questIndex < AllQuests.Count -1)
-        {
-            
-            AllQuests[questIndex].IsComplete = true;
+        {  
             AllQuests[++questIndex].StartedQuest = true;
             quest.text = AllQuests[questIndex].quest;
-           
         }
     } 
 
-    public void startCountDown(float timer)
+    public void startCountDown(float timer) //start the count down if there is one
     {
        
         StartCoroutine(CountDown(timer));
     }
 
-    IEnumerator CountDown(float timer)
+    IEnumerator CountDown(float timer) //handles the count down
     {
         for(float i = timer; i > 0; i--)
         {
-            questTimer.text = string.Format("{0:D2}:{1:D2}", (int)(i / 60 % 60), (int)(i % 60));
-            if (quitCountDown)
+            questTimer.text = string.Format("{0:D2}:{1:D2}", (int)(i / 60 % 60), (int)(i % 60)); //updates a timer UI
+            if (quitCountDown) //breaks out of the timer for the next quest
             {
                 quitCountDown = false;
-                skip = true;
                 break;
             }
             yield return new WaitForSeconds(1);
         }
-       
-        if (questIndex < AllQuests.Count - 1 && !skip)
-        {
-            QuestCompleted();
-        }
+
+        //if (TimerCompleted != null)
+        //{
+        //  TimerCompleted();
+        //}
+        QuestCompleted();
         questTimer.text = "";
     }
 
-    public void destroyedObject()
-    {
-        if(AllQuests[questIndex].myTargets.Count == 0)
-        {
-            QuestCompleted();
-        }
-    }
 }

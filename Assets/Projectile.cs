@@ -7,11 +7,11 @@ public class Projectile : MonoBehaviour {
     public float speed = 420f;
     public int predictionStepsPerFrame = 6;
 
-    public Vector3 bulletVelcity;
+    public Vector3 bulletVel;
 
     void Start()
         {
-        bulletVelcity = this.transform.forward * speed;
+             bulletVel = this.transform.forward * speed;
         }
 
     void Update()
@@ -20,8 +20,8 @@ public class Projectile : MonoBehaviour {
         float stepSize = 1.0f / predictionStepsPerFrame;
         for (float step = 0; step < 1; step += stepSize)
         {
-            bulletVelcity += Physics.gravity * stepSize * Time.deltaTime; ;
-            Vector3 point2 = point1 + bulletVelcity * stepSize *Time.deltaTime;
+            bulletVel += Physics.gravity * stepSize * Time.deltaTime; ;
+            Vector3 point2 = point1 + bulletVel * stepSize *Time.deltaTime;
 
             Ray ray = new Ray(point1, point2 - point1);
 
@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour {
     {
         Gizmos.color = Color.cyan;
         Vector3 point1 = this.transform.position;
-        Vector3 PredictedBulledSpeed = bulletVelcity;
+        Vector3 PredictedBulledSpeed = bulletVel;
         float stepSize = 0.01f;
         for (float step = 0; step < 1; step+= stepSize)
         {

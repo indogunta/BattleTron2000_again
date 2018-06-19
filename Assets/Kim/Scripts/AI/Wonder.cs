@@ -14,7 +14,7 @@ public class Wonder : MonoBehaviour
     {
 
         agent = GetComponent<NavMeshAgent>();
-        agent.autoBraking = true;
+        //agent.autoBraking = true;
         NextPoint();
     }
     public void NextPoint()

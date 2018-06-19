@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     public void BeenHit(int Damage)
     {
         currentHealth -= Damage;        
-       // everyonesHealth(currentHealth);
+      // everyonesHealth(currentHealth);
         currentHealth = ClampedHealth();
         Death();
     }

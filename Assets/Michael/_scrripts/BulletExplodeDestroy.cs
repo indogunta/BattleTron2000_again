@@ -11,7 +11,7 @@ public class BulletExplodeDestroy : MonoBehaviour
 	 public float count;
      public int damage = 20;
 
-    public PlayerManager player;
+   // public PlayerManager player;
     
 	void OnObjectSpawn()
 	{
@@ -24,15 +24,18 @@ public class BulletExplodeDestroy : MonoBehaviour
 	{
         if (other.CompareTag("ExplodeTrigger"))
         {
-            light.intensity = 0;
+            light.intensity *= 0;
             Health health = other.GetComponent<Health>();
           
             StartCoroutine(Explode());
             if (health != null)
             {
                 health.BeenHit(damage);
-              //  player.AddPoints();
+                //player.AddPoints();
                 //health.currentHealth -= damage;
+            }
+            else {
+                Debug.Log("no health seen");
             }
 
         }

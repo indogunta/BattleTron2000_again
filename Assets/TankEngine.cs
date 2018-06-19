@@ -13,13 +13,21 @@ public class TankEngine : MonoBehaviour {
     public WheelCollider WheelBl;
     public WheelCollider WheelBr;
 
+   [Header("car speed stuff")]
 
     public float maxMotorTorque = 800f;
     public float currentSpeed;
     public float maxSpeed = 200f;
     public Vector3 cenerOfMass;
 
+    [Header("sensors")]
+    public float sensorLemgth = 5.0f;
+    public Transform sensorStartPos;
+    public float frontSideSensorOffset = 5f;
+    public float frontSensorngle = 35f;
 
+    [Header("player attack stuff")]
+    public SphereCollider playerDetector;
 
     void Start()
 
@@ -39,10 +47,50 @@ public class TankEngine : MonoBehaviour {
     }
     void FixedUpdate()
     {
+        Sensors();
         ApplySteer();
         Drive();
         FindWaypointDist();
 
+    }
+
+    void Sensors()
+    {
+        RaycastHit hit;
+
+        Vector3 SensorStartPos = sensorStartPos.transform.position;
+        //front center sensor
+        if (Physics.Raycast(SensorStartPos, transform.forward,out hit, sensorLemgth))
+        {
+        }
+        Debug.DrawLine(SensorStartPos, hit.point);
+
+        //front right sensors
+        SensorStartPos.x += frontSideSensorOffset;
+        if (Physics.Raycast(SensorStartPos, transform.forward, out hit, sensorLemgth))
+        {
+        }
+        Debug.DrawLine(SensorStartPos, hit.point);
+        //front angle sensor
+        if (Physics.Raycast(SensorStartPos, Quaternion.AngleAxis(frontSensorngle, transform.up)* transform.forward, out hit, sensorLemgth))
+        {
+        }
+        Debug.DrawLine(SensorStartPos, hit.point);
+
+
+
+
+        //front left sensors
+        SensorStartPos.x -= 2* frontSideSensorOffset;
+        if (Physics.Raycast(SensorStartPos, transform.forward, out hit, sensorLemgth))
+        {
+        }
+        Debug.DrawLine(SensorStartPos, hit.point);
+        //front left angle sensor
+        if (Physics.Raycast(SensorStartPos, Quaternion.AngleAxis(-frontSensorngle, transform.up) * transform.forward, out hit, sensorLemgth))
+        {
+        }
+        Debug.DrawLine(SensorStartPos, hit.point);
     }
     void ApplySteer()
     {
@@ -89,6 +137,11 @@ public class TankEngine : MonoBehaviour {
                 print(currentnode);
             }
         }
+
+    }
+
+    void DetectPlayer()
+    {
 
     }
 }

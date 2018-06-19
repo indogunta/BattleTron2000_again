@@ -174,9 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6576a953b3957ce48bd844055190ffc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  speed: 600
   predictionStepsPerFrame: 6
-  bulletVelcity: {x: 0, y: 10, z: 400}
+  bulletVelcity: {x: 0, y: 25, z: 600}
 --- !u!114 &114636208885727726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,9 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1648062864487640, guid: 50848f69cf981bc47a9c53e55d17dc7f, type: 2}
   light: {fileID: 108177210445433820}
-  count: 4
+  count: 5
   damage: 20
-  player: {fileID: 0}
 --- !u!135 &135630298852534536
 SphereCollider:
   m_ObjectHideFlags: 1
