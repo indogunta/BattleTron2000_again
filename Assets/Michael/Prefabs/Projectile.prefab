@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 600
   predictionStepsPerFrame: 6
-  bulletVelcity: {x: 0, y: 25, z: 600}
+  bulletVel: {x: 0, y: 0, z: 0}
 --- !u!114 &114636208885727726
 MonoBehaviour:
   m_ObjectHideFlags: 1

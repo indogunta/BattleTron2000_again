@@ -19,7 +19,8 @@
 
 		sampler2D _MainTex;
 
-		struct Input {
+		struct Input 
+		{
 			float2 uv_MainTex;
 			float4 color : COLOR;
 		};
