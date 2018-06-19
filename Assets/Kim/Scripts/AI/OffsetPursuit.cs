@@ -12,7 +12,7 @@ public class OffsetPursuit : MonoBehaviour
     public float ahead;
     private void Update()
     {
-       // Pursuit();
+        Pursuit();
     }
 
     public Vector3 Pursuit()

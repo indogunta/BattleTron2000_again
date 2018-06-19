@@ -6,33 +6,36 @@ public class BulletExplodeDestroy : MonoBehaviour
 {
 
 	public GameObject explosion;
-	public GameObject me;
+	//public GameObject me;
     public Light light;
 	 public float count;
-     public int damage = 1;
+     public int damage = 20;
 
-    public PlayerManager player;
+   // public PlayerManager player;
     
 	void OnObjectSpawn()
 	{
-		me = GetComponent<GameObject>();
+		//me = GetComponent<GameObject>();
        light = GetComponent<Light>();
     }
 
    
 	void OnTriggerEnter(Collider other)
 	{
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("ExplodeTrigger"))
         {
-            light.intensity = 0;
+            light.intensity *= 0;
             Health health = other.GetComponent<Health>();
           
             StartCoroutine(Explode());
             if (health != null)
             {
                 health.BeenHit(damage);
-              //  player.AddPoints();
+                //player.AddPoints();
                 //health.currentHealth -= damage;
+            }
+            else {
+                Debug.Log("no health seen");
             }
 
         }

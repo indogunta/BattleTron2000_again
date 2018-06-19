@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Kim/Scenes/Main.unity
     guid: b066363d73622a84ba22dd454fd16a06
   - enabled: 1
