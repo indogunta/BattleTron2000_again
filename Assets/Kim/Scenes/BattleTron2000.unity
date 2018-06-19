@@ -3064,7 +3064,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh47334
+  m_Name: pb_Mesh-1580
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -6823,6 +6823,11 @@ Prefab:
       propertyPath: AllQuests.Array.data[0].myTargets.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[0].TargetTags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224146251794408596, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -7008,6 +7013,26 @@ Prefab:
       propertyPath: Source
       value: 
       objectReference: {fileID: 878757886}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[0].TargetTags.Array.data[0].tag
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[0].TargetTags.Array.data[0].qty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[0].timer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
+        type: 2}
+      propertyPath: AllQuests.Array.data[1].isTimed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0024f8d43ff84e40a3da77b305bfe11, type: 2}
   m_IsPrefabParent: 0
@@ -8406,7 +8431,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh47846
+  m_Name: pb_Mesh-1604
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -9625,11 +9650,20 @@ Prefab:
       propertyPath: m_SkinWidth
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 1541541117866864, guid: 7360273119d702f469d26d0244b634c4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23591400893578544, guid: 7360273119d702f469d26d0244b634c4,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 23591400893578544, guid: 7360273119d702f469d26d0244b634c4,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 77850c1933bc3ed45835032794efb6e4, type: 2}
+      objectReference: {fileID: 2100000, guid: 8f8db3b07a9db4b4386b72cb71411bbf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7360273119d702f469d26d0244b634c4, type: 2}
   m_IsPrefabParent: 0
