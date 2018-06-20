@@ -1,20 +1,8 @@
 fileFormatVersion: 2
 guid: d0f1d38ff24dcbb4ea93ff31aac87fbd
-timeCreated: 1529451409
-licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-<<<<<<< HEAD
-    100000: polySurface4
-    100002: //RootNode
-    400000: polySurface4
-    400002: //RootNode
-    2300000: polySurface4
-    3300000: polySurface4
-    4300000: polySurface4
-    6400000: polySurface4
-=======
     100000: pasted__pCube4
     100002: pasted__polySurface1
     100004: pasted__transform1
@@ -26,8 +14,6 @@ ModelImporter:
     2300000: pasted__polySurface1
     3300000: pasted__polySurface1
     4300000: pasted__polySurface1
-    6400000: pasted__polySurface1
->>>>>>> Colton
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -58,7 +44,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 10
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

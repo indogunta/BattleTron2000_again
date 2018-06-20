@@ -18,15 +18,5 @@ public class PlayerManager : MonoBehaviour
         playerPoints(currentPoints);
     }
 
-<<<<<<< HEAD
-    public void Update()
-    {
-        //if (playerPoints != null)
-        //{
-        //    playerPoints(currentPoints);
-        //}
-    }
-=======
 
->>>>>>> Kim
 }

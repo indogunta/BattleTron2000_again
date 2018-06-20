@@ -9,13 +9,9 @@ public class EnemyManager : MonoBehaviour
    // public Health enemyHealth;
     public PlayerManager player;
 
-<<<<<<< HEAD
-
     public static EnemyManager instance;
 
-=======
-   
->>>>>>> Kim
+
     public int enemyWorth;
 
     void Awake()
@@ -36,7 +32,7 @@ public class EnemyManager : MonoBehaviour
        // player.playerPoints += AddPoints;
     }
 
-<<<<<<< HEAD
+
    public void AddPoints(int addedPoints)
     {
         //if (enemyHealth.currentHealth <= 0 /*&& player != null*/)
@@ -44,15 +40,9 @@ public class EnemyManager : MonoBehaviour
             //playeplayer += enemyWorth;
             player.addPoints(addedPoints);
         //}
-=======
-    void AddPoints(int CurrentPoints)
-    {
-        if(enemyHealth.currentHealth <= 0 /*&& player != null*/)
-        {
-            CurrentPoints += enemyWorth;
-        }
->>>>>>> Kim
-    }
+	}
+
+
 
 
     //  public Health enemyHealth;
