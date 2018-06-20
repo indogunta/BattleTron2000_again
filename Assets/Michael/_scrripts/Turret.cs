@@ -14,22 +14,30 @@ public class Turret : MonoBehaviour
     private GameObject projectile;
     [SerializeField]
     private GameObject barrelTip;
+	//private GameObject temp;
 
     private Vector3 barrelForward;
 
-    void OnTriggerStay(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         { 
+			
                 // .. if it's enemy, look at it and shoot it
                 transform.LookAt(other.transform);
 				barrelForward = barrelTip.transform.forward;
                 StartCoroutine("FireDelay");
-                
-               
         }
         
     }
+
+	void Update()
+	{
+
+
+	}
+
 
     void FireTurret()
     {
@@ -43,6 +51,6 @@ public class Turret : MonoBehaviour
     IEnumerator FireDelay()
     {
 		FireTurret();
-        yield return new WaitForSeconds(speed);
+		yield return new WaitForSeconds(speed);
     }
 }
