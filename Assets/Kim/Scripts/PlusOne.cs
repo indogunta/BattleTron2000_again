@@ -14,7 +14,6 @@ public class PlusOne : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-
-        playerHealth.currentHealth += 1;
+        playerHealth.BeenHit(-1);
     }
 }

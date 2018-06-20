@@ -2655,7 +2655,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-355584
+  m_Name: pb_Mesh-60000
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -8632,6 +8632,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1329590470909976, guid: 76d499003b15e3c42a5f49dc0d29ba86,
     type: 2}
   m_PrefabInternal: {fileID: 1342572504}
+--- !u!114 &1576315480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576315479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42739a4be3758e24391035cfe1958206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 378306830}
 --- !u!114 &1576315485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11160,7 +11172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  currentHealth: 0
   destructable: {fileID: 1174017718093992, guid: 8e6c9f5e7889fd94e87cb89e3f3c4dad,
     type: 2}
   destructableSpawnPoint: {fileID: 1924418925}
@@ -11404,7 +11415,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  currentHealth: 0
   destructable: {fileID: 1819416442244552, guid: 7c77d6caa6f152b499839105dedf8f96,
     type: 2}
   destructableSpawnPoint: {fileID: 636413284}
@@ -11422,7 +11432,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-355634
+  m_Name: pb_Mesh-60082
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

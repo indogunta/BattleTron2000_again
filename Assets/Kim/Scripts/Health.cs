@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public EveryonesHealth everyonesHealth;
 
     public int maxHealth;
-    public int currentHealth;
+    public int currentHealth { get; private set; }
 
     public GameObject destructable;
     public Transform destructableSpawnPoint;
@@ -22,8 +22,12 @@ public class Health : MonoBehaviour
 
     public void BeenHit(int Damage)
     {
-        currentHealth -= Damage;        
-      // everyonesHealth(currentHealth);
+        currentHealth -= Damage;
+        EveryonesHealth healthDelegate = everyonesHealth;
+        if (everyonesHealth != null)
+        {
+            everyonesHealth(currentHealth);
+        }
         currentHealth = ClampedHealth();
         Death();
     }
