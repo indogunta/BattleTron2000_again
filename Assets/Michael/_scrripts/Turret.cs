@@ -23,10 +23,10 @@ public class Turret : MonoBehaviour
         { 
                 // .. if it's enemy, look at it and shoot it
                 transform.LookAt(other.transform);
-			barrelForward = barrelTip.transform.forward;
+				barrelForward = barrelTip.transform.forward;
                 StartCoroutine("FireDelay");
-                FireTurret();
-                StartCoroutine("FireDelay");
+                
+               
         }
         
     }
@@ -42,6 +42,7 @@ public class Turret : MonoBehaviour
     // So that each bullet has a delay between it being fired
     IEnumerator FireDelay()
     {
+		FireTurret();
         yield return new WaitForSeconds(speed);
     }
 }
