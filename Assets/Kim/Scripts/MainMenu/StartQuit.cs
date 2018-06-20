@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
@@ -17,11 +18,21 @@ public class StartQuit : MonoBehaviour
 
     public void onComplete()
     {
-        SceneManager.LoadScene(load);
+        StartCoroutine(AsyncLoad(load));
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator  AsyncLoad(string load)
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync(load);
+        while(!async.isDone)
+        {
+            Debug.Log(async.progress);
+            yield return null;
+        }
     }
 }

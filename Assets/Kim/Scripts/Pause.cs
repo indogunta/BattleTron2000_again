@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour
 {
     bool paused = false;
     public GameObject pauseMenu;
-    public Animator pauseAnim;
+    //public Animator pauseAnim;
     // Use this for initialization
     void Start()
     {

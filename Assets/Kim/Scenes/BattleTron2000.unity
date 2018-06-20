@@ -7708,17 +7708,57 @@ Prefab:
         type: 2}
       propertyPath: playerPoints
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 378306831}
     - target: {fileID: 114079116212001362, guid: 76d499003b15e3c42a5f49dc0d29ba86,
         type: 2}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 378306830}
     - target: {fileID: 114079116212001362, guid: 76d499003b15e3c42a5f49dc0d29ba86,
         type: 2}
       propertyPath: pointsUI
       value: 
       objectReference: {fileID: 1076061301}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.02254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.81897
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1980
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.02254902
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76d499003b15e3c42a5f49dc0d29ba86, type: 2}
   m_IsPrefabParent: 0
@@ -8668,7 +8708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1033984092}
-  pauseAnim: {fileID: 0}
 --- !u!1 &1585864278
 GameObject:
   m_ObjectHideFlags: 0
