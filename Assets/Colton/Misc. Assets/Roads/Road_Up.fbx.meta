@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 53f12033b97ef664fbcdc66181e1a4a1
-timeCreated: 1529432226
+guid: d0f1d38ff24dcbb4ea93ff31aac87fbd
+timeCreated: 1529451409
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
+<<<<<<< HEAD
     100000: polySurface4
     100002: //RootNode
     400000: polySurface4
@@ -13,6 +14,20 @@ ModelImporter:
     3300000: polySurface4
     4300000: polySurface4
     6400000: polySurface4
+=======
+    100000: pasted__pCube4
+    100002: pasted__polySurface1
+    100004: pasted__transform1
+    100006: //RootNode
+    400000: pasted__pCube4
+    400002: pasted__polySurface1
+    400004: pasted__transform1
+    400006: //RootNode
+    2300000: pasted__polySurface1
+    3300000: pasted__polySurface1
+    4300000: pasted__polySurface1
+    6400000: pasted__polySurface1
+>>>>>>> Colton
     9500000: //RootNode
   materials:
     importMaterials: 1
