@@ -6,20 +6,23 @@ public class PlayerManager : MonoBehaviour
 {
     public delegate void PlayerPoints(int points);
     public PlayerPoints playerPoints;
-    public EnemyManager enemy;
+   // public EnemyManager enemy;
 
     public int currentPoints = 0;
 
-      public void Update()
+
+    public void addPoints(int addedPoints)
     {
-        if (playerPoints != null)
-        {
-            playerPoints(currentPoints);
-        }
+        currentPoints += addedPoints;
+
+        playerPoints(currentPoints);
     }
 
-    public void AddPoints()
+    public void Update()
     {
-        currentPoints += enemy.enemyWorth;
+        //if (playerPoints != null)
+        //{
+        //    playerPoints(currentPoints);
+        //}
     }
 }

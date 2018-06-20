@@ -27,8 +27,9 @@ public class TankEngine : MonoBehaviour {
     public float frontSensorngle = 35f;
 
     [Header("player attack stuff")]
-    public SphereCollider playerDetector;
-
+    //public SphereCollider playerDetector;
+    public GameObject player;   
+    public float attackDistance;
     void Start()
 
     {
@@ -63,19 +64,19 @@ public class TankEngine : MonoBehaviour {
         if (Physics.Raycast(SensorStartPos, transform.forward,out hit, sensorLemgth))
         {
         }
-        Debug.DrawLine(SensorStartPos, hit.point);
+        //Debug.DrawLine(SensorStartPos, hit.point);
 
         //front right sensors
         SensorStartPos.x += frontSideSensorOffset;
         if (Physics.Raycast(SensorStartPos, transform.forward, out hit, sensorLemgth))
         {
         }
-        Debug.DrawLine(SensorStartPos, hit.point);
+      //  Debug.DrawLine(SensorStartPos, hit.point);
         //front angle sensor
         if (Physics.Raycast(SensorStartPos, Quaternion.AngleAxis(frontSensorngle, transform.up)* transform.forward, out hit, sensorLemgth))
         {
         }
-        Debug.DrawLine(SensorStartPos, hit.point);
+      //  Debug.DrawLine(SensorStartPos, hit.point);
 
 
 
@@ -85,12 +86,12 @@ public class TankEngine : MonoBehaviour {
         if (Physics.Raycast(SensorStartPos, transform.forward, out hit, sensorLemgth))
         {
         }
-        Debug.DrawLine(SensorStartPos, hit.point);
+      //  Debug.DrawLine(SensorStartPos, hit.point);
         //front left angle sensor
         if (Physics.Raycast(SensorStartPos, Quaternion.AngleAxis(-frontSensorngle, transform.up) * transform.forward, out hit, sensorLemgth))
         {
         }
-        Debug.DrawLine(SensorStartPos, hit.point);
+      //  Debug.DrawLine(SensorStartPos, hit.point);
     }
     void ApplySteer()
     {
@@ -142,6 +143,15 @@ public class TankEngine : MonoBehaviour {
 
     void DetectPlayer()
     {
+        Physics.OverlapSphere(transform.position, 200f);
+         
+        
+    }
 
+    void OnDrawGizmos()
+    {
+        Color color = Color.blue;
+        Gizmos.color = color;
+        Gizmos.DrawWireSphere(transform.position, 200f);
     }
 }

@@ -10,9 +10,15 @@ public class BulletExplodeDestroy : MonoBehaviour
     public Light light;
 	 public float count;
      public int damage = 20;
-
-   // public PlayerManager player;
+   // public int scoreWorth;
+    public EnemyManager enemy;
     
+
+    void Start()
+    {
+        enemy = EnemyManager.instance;
+    }
+
 	void OnObjectSpawn()
 	{
 		//me = GetComponent<GameObject>();
@@ -31,8 +37,8 @@ public class BulletExplodeDestroy : MonoBehaviour
             if (health != null)
             {
                 health.BeenHit(damage);
-                //player.AddPoints();
-                //health.currentHealth -= damage;
+                enemy.AddPoints(enemy.enemyWorth);
+             
             }
             else {
                 Debug.Log("no health seen");
