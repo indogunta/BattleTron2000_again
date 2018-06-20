@@ -33,7 +33,7 @@ public class Pause : MonoBehaviour
 
     void Resume()
     {
-                pauseAnim.SetTrigger("Unpause");
+               // pauseAnim.SetTrigger("Unpause");
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         paused = true;
@@ -41,7 +41,7 @@ public class Pause : MonoBehaviour
 
     void Paused()
     {
-                pauseAnim.SetTrigger("Pause");
+            //    pauseAnim.SetTrigger("Pause");
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         paused = false;

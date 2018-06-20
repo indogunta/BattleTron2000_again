@@ -18,8 +18,5 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void AddPoints()
-    {
-        currentPoints += enemy.enemyWorth;
-    }
+
 }

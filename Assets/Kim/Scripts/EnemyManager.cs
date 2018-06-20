@@ -8,9 +8,7 @@ public class EnemyManager : MonoBehaviour
     public Health enemyHealth;
     public PlayerManager player;
 
-    [SerializeField]
-    private Text pointsUI;
-
+   
     public int enemyWorth;
     // Use this for initialization
     void Start()
@@ -18,12 +16,11 @@ public class EnemyManager : MonoBehaviour
         player.playerPoints += AddPoints;
     }
 
-    void AddPoints(int updatePoints)
+    void AddPoints(int CurrentPoints)
     {
         if(enemyHealth.currentHealth <= 0 /*&& player != null*/)
         {
-            
-            pointsUI.text = "Points: " + updatePoints;
+            CurrentPoints += enemyWorth;
         }
     }
 
