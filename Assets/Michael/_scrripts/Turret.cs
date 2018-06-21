@@ -31,30 +31,38 @@ public class Turret : MonoBehaviour
         }
         
     }
-
+    float timer = 3f;
     void Update()
     {
        
+     
+        timer -= Time.deltaTime;
+
+        print(timer);
         Debug.DrawLine(transform.position, target.transform.position, Color.red);
 
-      
 
-        if (Vector3.Distance(transform.position, target.transform.position) < attackDistance)
-
-        {
-
+            if (Vector3.Distance(transform.position, target.transform.position) < attackDistance)
+            {
             transform.LookAt(target.transform);
             barrelForward = barrelTip.transform.forward;
-           StartCoroutine("Fire");
-        }
+                  if (timer <= 0f)
+                 {
+            
+                      StartCoroutine("FireDelay");
+                     timer = speed;
+                  }
+               
+            }
 
 
-
+        
 
     }
 
     void OnTriggerExit(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
 
@@ -80,9 +88,9 @@ public class Turret : MonoBehaviour
     // So that each bullet has a delay between it being fired
     IEnumerator FireDelay()
     {
-	
-		yield return new WaitForSeconds(speed);
         FireTurret();
+        yield return new WaitForSeconds(speed);
+        
     }
     IEnumerator Fire()
     {
