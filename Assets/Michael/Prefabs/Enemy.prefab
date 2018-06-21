@@ -1140,7 +1140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  currentHealth: 20
   destructable: {fileID: 1039136247549492, guid: 18ef3f4e57630e2428d45b635978c114,
     type: 2}
   destructableSpawnPoint: {fileID: 4807028546469684}
@@ -1155,7 +1154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a886393032963b4a9fe24e6e2ebb9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 0}
+  path: {fileID: 4623344587200686, guid: 099db71919fca8e42b5ea293eb2a4a87, type: 2}
   maxSteerAngle: 40
   WheelFl: {fileID: 146693315446609390}
   WheelFr: {fileID: 146957929011366130}
@@ -1182,9 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097459c72daf7f947963f65135903a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 114302713581689248}
   player: {fileID: 0}
-  pointsUI: {fileID: 0}
   enemyWorth: 50
 --- !u!146 &146613940428346372
 WheelCollider:
