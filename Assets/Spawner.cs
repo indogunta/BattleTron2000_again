@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        spawnPoint.transform.position = this.transform.position;
+        spawnPoint.transform.position = gameObject.transform.position;
     }
 	void Update()
 	{
@@ -38,11 +38,11 @@ public class Spawner : MonoBehaviour
                 yield return new WaitForSeconds(TimeToWait);
 
                  Vector3 Spawnpos = Random.insideUnitSphere * radius;
-                 spawnPoint.transform.position =Spawnpos;
+                Spawnpos = spawnPoint.transform.position;
 
 
 
-                Spawnpos.y = 15;
+               // Spawnpos.y = 15;
                 GameObject spawnedEnemy = Instantiate(enemy, Spawnpos, Quaternion.identity);
                 enemyCount++;
             }

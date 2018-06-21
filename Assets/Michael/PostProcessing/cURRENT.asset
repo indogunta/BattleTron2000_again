@@ -293,7 +293,7 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 0.071
+    value: 0.057
   size:
     overrideState: 0
     value: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 0
-    value: {x: 50, y: 95}
+    value: {x: 1, y: 46}
   minLuminance:
     overrideState: 0
     value: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -425,7 +425,7 @@ MonoBehaviour:
     value: {fileID: 0}
   intensity:
     overrideState: 1
-    value: 0.216
+    value: 1
   fastMode:
     overrideState: 0
     value: 0
@@ -458,10 +458,10 @@ MonoBehaviour:
     value: 8
   maximumMarchDistance:
     overrideState: 1
-    value: 200
+    value: 215.69
   distanceFade:
     overrideState: 1
-    value: 1
+    value: 0.454
   vignette:
     overrideState: 1
     value: 0

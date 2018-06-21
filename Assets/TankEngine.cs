@@ -30,6 +30,7 @@ public class TankEngine : MonoBehaviour {
     //public SphereCollider playerDetector;
     public GameObject player;   
     public float attackDistance;
+
     void Start()
 
     {
@@ -135,17 +136,20 @@ public class TankEngine : MonoBehaviour {
             else
             {
                 currentnode++;
-                print(currentnode);
+                print("current node " + currentnode);
             }
         }
 
     }
 
-    void DetectPlayer()
+    void OnTiggerEnter(Collider other)
     {
-        Physics.OverlapSphere(transform.position, 200f);
-         
-        
+        if (other.tag == "Player")
+        {
+            print(nodes.Count + other.gameObject.name);
+            nodes.Add(other.transform);
+            print(nodes.Count + other.gameObject.name);
+        }
     }
 
     void OnDrawGizmos()

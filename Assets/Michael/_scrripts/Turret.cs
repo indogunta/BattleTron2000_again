@@ -14,8 +14,8 @@ public class Turret : MonoBehaviour
     private GameObject projectile;
     [SerializeField]
     private GameObject barrelTip;
-	//private GameObject temp;
-
+    //private GameObject temp;
+    public float attackDistance;
     private Vector3 barrelForward;
 
 
@@ -27,16 +27,46 @@ public class Turret : MonoBehaviour
                 // .. if it's enemy, look at it and shoot it
                 transform.LookAt(other.transform);
 				barrelForward = barrelTip.transform.forward;
-                StartCoroutine("FireDelay");
+                StartCoroutine("Fire");
         }
         
     }
 
-	void Update()
-	{
+    void Update()
+    {
+       
+        Debug.DrawLine(transform.position, target.transform.position, Color.red);
+
+      
+
+        if (Vector3.Distance(transform.position, target.transform.position) < attackDistance)
+
+        {
+
+            transform.LookAt(target.transform);
+            barrelForward = barrelTip.transform.forward;
+           StartCoroutine("Fire");
+        }
 
 
-	}
+
+
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+            // .. if it's enemy, look at it and shoot it
+            transform.LookAt(other.transform);
+            barrelForward = barrelTip.transform.forward;
+            StartCoroutine("Fire");
+        }
+
+    }
+
+
 
 
     void FireTurret()
@@ -50,7 +80,12 @@ public class Turret : MonoBehaviour
     // So that each bullet has a delay between it being fired
     IEnumerator FireDelay()
     {
-		FireTurret();
+	
 		yield return new WaitForSeconds(speed);
+        FireTurret();
+    }
+    IEnumerator Fire()
+    {
+        yield return StartCoroutine("FireTurret");
     }
 }
