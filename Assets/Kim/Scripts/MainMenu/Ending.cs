@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Ending : MonoBehaviour
+public class Ending 
 {
     public Health playerHealth;
     // Use this for initialization
