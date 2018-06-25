@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
 
 
                // Spawnpos.y = 15;
-                GameObject spawnedEnemy = Instantiate(enemy, Spawnpos, Quaternion.identity);
+                GameObject spawnedEnemy = Instantiate(enemy, Spawnpos, transform.rotation);
                 enemyCount++;
             }
             if(enemyCount >= spawnMax)

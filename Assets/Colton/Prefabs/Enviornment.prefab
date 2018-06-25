@@ -15180,7 +15180,7 @@ GameObject:
   - component: {fileID: 154388062437929854}
   m_Layer: 8
   m_Name: SquareFloor
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26592,7 +26592,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1101700851319290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1327.3102, y: -306.60562, z: -452.64523}
+  m_LocalPosition: {x: -131, y: -1000, z: 848.5967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4242609323809052}

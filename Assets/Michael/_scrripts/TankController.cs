@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TankController : MonoBehaviour {
 
+
+    
 	public float boostMultiplier = 10f;
 	public float jumpForce = 3000f;
 
@@ -33,7 +35,7 @@ public class TankController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if(Physics.Raycast (transform.position, transform.up * -1, 3f))
+        if(Physics.Raycast (transform.position, -transform.up, 3f))
         {
             rb.drag = 1;
 		
@@ -53,7 +55,7 @@ public class TankController : MonoBehaviour {
         {
            rb.drag = 0;
 			Vector3 superGrav = -transform.up * acceleration * 100;
-			rb.AddRelativeForce (superGrav*10);
+			rb.AddRelativeForce (superGrav*15);
         }
 
         Vector3 turnTorque = Vector3.up * rotationRate * Input.GetAxis("Horizontal");

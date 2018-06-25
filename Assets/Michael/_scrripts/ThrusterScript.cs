@@ -26,7 +26,7 @@ public class ThrusterScript : MonoBehaviour {
             Vector3 downwardForce;
             float distancePercentage;
 
-			if (Physics.Raycast (thruster.position, Vector3.up * -1, out hit, thrusterDistance, mask)) 
+			if (Physics.Raycast (thruster.position, -Vector3.up, out hit, thrusterDistance, mask)) 
 			{
 				distancePercentage = 1 - (hit.distance / thrusterDistance);
 
@@ -36,11 +36,11 @@ public class ThrusterScript : MonoBehaviour {
 
 				rb.AddForceAtPosition (downwardForce, thruster.position);
 
-                Debug.DrawLine(thruster.position, hit.point);
+                
 
 			}
+            Debug.DrawLine(thruster.position, hit.point);
 
-		
         }
 	
     }
