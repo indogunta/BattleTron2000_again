@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ListOfQuests : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class ListOfQuests : MonoBehaviour
         {
             AllQuests[++questIndex].StartedQuest = true;
             quest.text = AllQuests[questIndex].quest;
+        }
+        else
+        {
+            SceneManager.LoadScene("EndScreen");
         }
     }
 
