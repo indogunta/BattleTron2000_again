@@ -13,11 +13,13 @@ public class StartQuit : MonoBehaviour
     public void LevelChanging(string index)
     {
         load = index;
+        Debug.Log(load);
         animator.SetTrigger("FadeOut");
     }
 
     public void onComplete()
     {
+        Debug.Log(load);
         StartCoroutine(AsyncLoad(load));
     }
 
@@ -28,6 +30,7 @@ public class StartQuit : MonoBehaviour
 
     IEnumerator  AsyncLoad(string load)
     {
+        Debug.Log("trying to load:" + load);
         AsyncOperation async = SceneManager.LoadSceneAsync(load);
         while(!async.isDone)
         {
