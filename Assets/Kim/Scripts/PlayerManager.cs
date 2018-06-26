@@ -9,13 +9,19 @@ public class PlayerManager : MonoBehaviour
    // public EnemyManager enemy;
 
     public int currentPoints = 0;
-
+    private void Start()
+    {
+       
+    }
+    
 
     public void addPoints(int addedPoints)
     {
+        PlayerPrefs.SetInt("PlayerScore", currentPoints);
         currentPoints += addedPoints;
 
         playerPoints(currentPoints);
+       
     }
 
 

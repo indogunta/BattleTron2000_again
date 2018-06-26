@@ -8,6 +8,8 @@ public class ListOfQuests : MonoBehaviour
 {
 
     public delegate void delTimerCompleted();
+    public PlayerManager playerManager;
+    public GameObject marker;
 
     public List<Objectives> AllQuests;
 
@@ -43,6 +45,10 @@ public class ListOfQuests : MonoBehaviour
         }
         else
         {
+            if (playerManager.currentPoints >= PlayerPrefs.GetInt("Score", 0))
+            {
+                PlayerPrefs.SetInt("Score", playerManager.currentPoints);
+            }
             SceneManager.LoadScene("EndScreen");
         }
     }

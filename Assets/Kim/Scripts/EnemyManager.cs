@@ -35,9 +35,7 @@ public class EnemyManager : MonoBehaviour
 
    public void AddPoints(int addedPoints)
     {
-        //if (enemyHealth.currentHealth <= 0 /*&& player != null*/)
-        //{
-            //playeplayer += enemyWorth;
+       
             player.addPoints(addedPoints);
         //}
 	}

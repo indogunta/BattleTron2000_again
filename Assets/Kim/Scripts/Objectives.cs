@@ -21,6 +21,7 @@ public class Objectives
     [Header("Target Info")]
     public clsTargetTags[] TargetTags; //use this if the player is to go to a destenation or if it does not matter what the player is attacking
     public List<GameObject> myTargets; // sets the target of the the quest
+    public GameObject[] questMarker; //allows to place a marker on a gameobject
 
     [Header("Bools")]
     public bool isGameObject = false; //use this if the player is attacking something spacific 
@@ -87,6 +88,10 @@ public class Objectives
 
         if (isGameObject) 
         {
+            for (int i = 0; i < questMarker.Length; i++)
+            {
+                questMarker[i].SetActive(true);
+            }
             myTargets.Remove(target);
             if (myTargets.Count == 0)
             {
