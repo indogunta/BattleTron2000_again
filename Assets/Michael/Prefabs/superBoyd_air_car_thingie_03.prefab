@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 95289130593641800}
   - component: {fileID: 114292926986480666}
   - component: {fileID: 54387981249214278}
+  - component: {fileID: 114793293405678834}
   m_Layer: 0
   m_Name: superBoyd_air_car_thingie_03
   m_TagString: ExplodeTrigger
@@ -95,6 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4489658374366072}
   - component: {fileID: 114550898267409788}
+  - component: {fileID: 135987489397289514}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
@@ -161,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688311343280174}
   m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2798.354, y: -25.394379, z: 622.3345}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4356284070679098}
@@ -366,7 +368,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: ff3cd29c0ecaad646b444e3868375c47, type: 3}
@@ -380,7 +382,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: ff3cd29c0ecaad646b444e3868375c47, type: 3}
@@ -394,7 +396,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: ff3cd29c0ecaad646b444e3868375c47, type: 3}
@@ -442,8 +444,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 0
-  turningRate: 0
-  projectile: {fileID: 0}
-  barrelTip: {fileID: 0}
-  attackDistance: 0
+  speed: 0.2
+  turningRate: 5
+  projectile: {fileID: 1237290428166096, guid: fae1431dc213ae4489796da2d78807b7, type: 2}
+  barrelTip: {fileID: 1936346366735824}
+  attackDistance: 400
+--- !u!114 &114793293405678834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1688311343280174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25cb8f4b49f13d448a11e1e049ef7733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135987489397289514
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936346366735824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 400
+  m_Center: {x: 0, y: 0, z: 0}

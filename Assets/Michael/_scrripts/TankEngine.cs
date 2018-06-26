@@ -152,10 +152,5 @@ public class TankEngine : MonoBehaviour {
         }
     }
 
-    void OnDrawGizmos()
-    {
-        Color color = Color.blue;
-        Gizmos.color = color;
-        Gizmos.DrawWireSphere(transform.position, 200f);
-    }
+
 }

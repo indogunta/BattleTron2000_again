@@ -197,11 +197,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &229199778 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95855380359132842, guid: 2eb6f03f40ac29f46a9a03cc041cec4d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1250186295}
 --- !u!1 &325776551
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,9 +291,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130907576}
-        m_MethodName: BackToMain
-        m_Mode: 1
+      - m_Target: {fileID: 1250186296}
+        m_MethodName: LevelChanging
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -572,7 +567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130907576}
+      - m_Target: {fileID: 1250186296}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -852,6 +847,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eb6f03f40ac29f46a9a03cc041cec4d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1250186296 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114341159642525186, guid: 2eb6f03f40ac29f46a9a03cc041cec4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250186295}
+  m_Script: {fileID: 11500000, guid: 20a7ecd62ec49c547b461f122b35b440, type: 3}
 --- !u!1 &1528809469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1164,6 @@ GameObject:
   - component: {fileID: 2130907574}
   - component: {fileID: 2130907573}
   - component: {fileID: 2130907572}
-  - component: {fileID: 2130907576}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: Untagged
@@ -1247,18 +1247,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2130907576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2130907571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20a7ecd62ec49c547b461f122b35b440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 229199778}
 --- !u!1 &2135265768
 GameObject:
   m_ObjectHideFlags: 0

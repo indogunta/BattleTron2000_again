@@ -47,7 +47,7 @@ public class EnemyBulletExplodeDestroy : MonoBehaviour
 	{
 		GameObject spawnedExplosion = Instantiate (explosion, transform.position, Quaternion.identity);
 		yield return new WaitForSeconds (count);
-		Destroy (spawnedExplosion);
+		Destroy (spawnedExplosion.gameObject);
 	}
 
 }

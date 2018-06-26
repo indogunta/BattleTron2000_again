@@ -1183,16 +1183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a886393032963b4a9fe24e6e2ebb9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 4258514721964730, guid: f2980e9e77298ec46bc1bae66f36986b, type: 2}
+  path: {fileID: 4623344587200686, guid: 099db71919fca8e42b5ea293eb2a4a87, type: 2}
   maxSteerAngle: 40
   WheelFl: {fileID: 146693315446609390}
   WheelFr: {fileID: 146957929011366130}
   WheelBl: {fileID: 146613940428346372}
   WheelBr: {fileID: 146858223967624804}
-  maxMotorTorque: 20000
-  currentSpeed: 3140.4966
-  maxSpeed: 2500
-  cenerOfMass: {x: 0, y: -1, z: 0}
+  maxMotorTorque: 15000
+  currentSpeed: 0
+  maxSpeed: 1875
+  cenerOfMass: {x: 0, y: 0, z: 0}
   sensorLemgth: 5
   sensorStartPos: {fileID: 4828823095955042}
   frontSideSensorOffset: 4.8

@@ -21,7 +21,7 @@ public class UI : MonoBehaviour
     }
     void UpdateHealthUI(int currentHealth)
     {
-        healthUI.fillAmount = 1 / playerHealth.maxHealth * (currentHealth);
+        healthUI.fillAmount =  (float)currentHealth / playerHealth.maxHealth;
     }
 
     void UpdatePoints(int points)

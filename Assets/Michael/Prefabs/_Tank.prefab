@@ -647,7 +647,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700523265181790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -190.2, y: -406.1, z: 2328.4}
+  m_LocalPosition: {x: -1259.6, y: -691.19, z: 2487.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4761458730068918}
@@ -82678,8 +82678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 20011250826585592}
   followCam: {fileID: 0}
-  horiz: 200
-  vert: 200
+  horiz: 100
+  vert: 100
   horizMax: 0
   vertMax: 0
   originalQ: {x: 0, y: -1, z: 0, w: 0}
