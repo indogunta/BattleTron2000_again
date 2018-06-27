@@ -28,12 +28,13 @@ public class BulletExplodeDestroy : MonoBehaviour
    
 	void OnTriggerEnter(Collider other)
 	{
-        if (other.CompareTag("ExplodeTrigger"))
+        if (other.CompareTag("ExplodeTrigger") || other.CompareTag("Ground"))
         {
             light.intensity *= 0;
+            StartCoroutine(Explode());
             Health health = other.GetComponent<Health>();
           
-            StartCoroutine(Explode());
+           
             if (health != null)
             {
                 health.BeenHit(damage);
@@ -52,9 +53,9 @@ public class BulletExplodeDestroy : MonoBehaviour
 		count -= Time.deltaTime;
 		if (count <= 0f) 
 		{
-			Destroy (gameObject.gameObject);
-            
-
+            StartCoroutine(Explode());
+            Destroy (gameObject.gameObject);
+           
 		}
 	}
 	 

@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
 
     public GameObject destructable;
     public Transform destructableSpawnPoint;
+    public AudioSource deathSound;
 
 
     private void Start()
@@ -40,10 +41,11 @@ public class Health : MonoBehaviour
 
     void Death()
     {
+        deathSound.Play();
         if (currentHealth <= 0)
         {
             ListOfQuests.Instance.AllQuests[ListOfQuests.Instance.questIndex].CheckTargets(gameObject);
-
+            
             Destroy(gameObject);
             Instantiate(destructable, destructableSpawnPoint.transform.position, destructableSpawnPoint.transform.rotation );
             StartCoroutine(KillParts());

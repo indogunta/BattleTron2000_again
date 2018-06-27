@@ -19,18 +19,21 @@ public class TankController : MonoBehaviour {
     private float rotationVelocity;
     private float groundAngleVelocity;
 
+
+    public AudioSource thrustSound;
     Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        if (Cursor.lockState != CursorLockMode.Locked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 	void Update()
 	{
-		if (Cursor.lockState != CursorLockMode.Locked) {
-			Cursor.lockState = CursorLockMode.Locked;
-		}
+		
 	}
 
     private void FixedUpdate()
@@ -50,10 +53,13 @@ public class TankController : MonoBehaviour {
 			rb.AddForce (jump);
             rb.AddForce(forwardForce);
 			rb.AddForce(forwardBoostForce);
+
+            Debug.Log(forwardForce.x+ " speed ");
+
         }
         else
         {
-           rb.drag = 0;
+           rb.drag = 1;
 			Vector3 superGrav = -transform.up * acceleration * 100;
 			rb.AddRelativeForce (superGrav*15);
         }

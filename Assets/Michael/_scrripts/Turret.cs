@@ -18,6 +18,8 @@ public class Turret : MonoBehaviour
     public float attackDistance;
     private Vector3 barrelForward;
 
+    public AudioSource AttackSound;
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,6 +29,7 @@ public class Turret : MonoBehaviour
                 // .. if it's enemy, look at it and shoot it
                 transform.LookAt(other.transform);
 				barrelForward = barrelTip.transform.forward;
+     
                 StartCoroutine("Fire");
         }
         
@@ -38,7 +41,7 @@ public class Turret : MonoBehaviour
      
         timer -= Time.deltaTime;
 
-        print(timer);
+      //  print(timer);
         Debug.DrawLine(transform.position, target.transform.position, Color.red);
 
 
@@ -48,7 +51,7 @@ public class Turret : MonoBehaviour
             barrelForward = barrelTip.transform.forward;
                   if (timer <= 0f)
                  {
-            
+                
                       StartCoroutine("FireDelay");
                      timer = speed;
                   }
@@ -79,6 +82,7 @@ public class Turret : MonoBehaviour
 
     void FireTurret()
     {
+        AttackSound.Play();
         // Instantiate the bullets as gameObjects
         var bullet = Instantiate(projectile, barrelTip.transform.position, Quaternion.identity) as GameObject;
         // Add the impulse force to make the bullets move
@@ -94,6 +98,6 @@ public class Turret : MonoBehaviour
     }
     IEnumerator Fire()
     {
-        yield return StartCoroutine("FireTurret");
+        yield return StartCoroutine("FireDelay");
     }
 }

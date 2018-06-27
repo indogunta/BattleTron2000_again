@@ -77,18 +77,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllQuests:
   - quest: Destroy 2 Tower
+    backgroundMusic: {fileID: 0}
     TargetTags: []
     myTargets: []
+    isGameObject: 0
     isTimed: 1
     timer: 2
+    _isComplete: 0
   - quest: Kill
+    backgroundMusic: {fileID: 0}
     TargetTags: []
     myTargets: []
+    isGameObject: 0
     isTimed: 1
     timer: 120
+    _isComplete: 0
+  Source: {fileID: 0}
   questIndex: 0
   questTimer: {fileID: 114334818856148510}
   quest: {fileID: 114756950082826978}
+  quitCountDown: 0
 --- !u!114 &114225893903283618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -817, y: 329}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224807602466244336
@@ -277,6 +285,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -817, y: 86}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
