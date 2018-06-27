@@ -32,6 +32,7 @@ public class MainGraphics : MonoBehaviour
     {
         return RTS.width + " x " + RTS.height;
     }
+  
 
     public void graphics()
     {

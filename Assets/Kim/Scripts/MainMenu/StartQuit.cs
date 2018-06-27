@@ -7,14 +7,21 @@ using UnityEngine.SceneManagement;
 public class StartQuit : MonoBehaviour
 {
     public Animator animator;
+    public AudioSource buttonAudio;
 
     private string load;
 
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     public void LevelChanging(string index)
     {
         load = index;
         Debug.Log(load);
         animator.SetTrigger("FadeOut");
+        buttonAudio.Play();
     }
 
     public void onComplete()
