@@ -21,7 +21,7 @@ public class Objectives
     [Header("Target Info")]
     public clsTargetTags[] TargetTags; //use this if the player is to go to a destenation or if it does not matter what the player is attacking
     public List<GameObject> myTargets; // sets the target of the the quest
-    public GameObject[] questMarker; //allows to place a marker on a gameobject
+    public List<GameObject> questMarker; //allows to place a marker on a gameobject
 
     [Header("Bools")]
     public bool isGameObject = false; //use this if the player is attacking something spacific 
@@ -30,7 +30,7 @@ public class Objectives
     [Header("Timer")]
     public float timer;
 
-    
+
 
     [Header("--E--------N--------D--")]
     [SerializeField]
@@ -53,6 +53,16 @@ public class Objectives
             {
                 ListOfQuests.Instance.startCountDown(timer);
             }
+            if(isGameObject)
+            {
+                for (int i = 0; i < questMarker.Count; i++)
+                {
+                    if (questMarker[i] != null)
+                    {
+                        questMarker[i].SetActive(true);
+                    }
+                }
+            }
         }
     }
     [SerializeField]
@@ -61,12 +71,13 @@ public class Objectives
         get { return _isComplete; }
         set
         {
-          
+
             if (value)
             {
                 startedQuest = false;
             }
             _isComplete = value;
+            //ListOfQuests.Instance.Source.Stop();
         }
     }
 
@@ -86,12 +97,10 @@ public class Objectives
             return;
         }
 
-        if (isGameObject) 
+        if (isGameObject)
         {
-            for (int i = 0; i < questMarker.Length; i++)
-            {
-                questMarker[i].SetActive(true);
-            }
+
+          
             myTargets.Remove(target);
             if (myTargets.Count == 0)
             {

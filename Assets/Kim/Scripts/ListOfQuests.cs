@@ -48,6 +48,7 @@ public class ListOfQuests : MonoBehaviour
             if (playerManager.currentPoints >= PlayerPrefs.GetInt("Score", 0))
             {
                 PlayerPrefs.SetInt("Score", playerManager.currentPoints);
+                PlayerPrefs.Save();
             }
             SceneManager.LoadScene("EndScreen");
         }

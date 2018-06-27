@@ -17,11 +17,13 @@ public class PlayerManager : MonoBehaviour
 
     public void addPoints(int addedPoints)
     {
-        PlayerPrefs.SetInt("PlayerScore", currentPoints);
+       
         currentPoints += addedPoints;
 
         playerPoints(currentPoints);
-       
+        PlayerPrefs.SetInt("PlayerScore", currentPoints);
+      
+        PlayerPrefs.Save();
     }
 
 
