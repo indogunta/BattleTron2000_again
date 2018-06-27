@@ -7,7 +7,7 @@ public class ThrusterScript : MonoBehaviour {
     public float thrusterStrength;
     public float thrusterDistance;
     public Transform[] thrusters;
-
+   
     public LayerMask mask;
 
 

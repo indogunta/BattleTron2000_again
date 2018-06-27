@@ -21,19 +21,7 @@ public class Turret : MonoBehaviour
     public AudioSource AttackSound;
 
 
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
-        { 
-			
-                // .. if it's enemy, look at it and shoot it
-                transform.LookAt(other.transform);
-				barrelForward = barrelTip.transform.forward;
-     
-                StartCoroutine("Fire");
-        }
-        
-    }
+
     float timer = 3f;
     void Update()
     {
@@ -52,7 +40,8 @@ public class Turret : MonoBehaviour
                   if (timer <= 0f)
                  {
                 
-                      StartCoroutine("FireDelay");
+                    //  StartCoroutine("FireDelay");
+                         FireTurret();
                      timer = speed;
                   }
                
@@ -63,19 +52,7 @@ public class Turret : MonoBehaviour
 
     }
 
-    void OnTriggerExit(Collider other)
-    {
 
-        if (other.CompareTag("Player"))
-        {
-
-            // .. if it's enemy, look at it and shoot it
-            transform.LookAt(other.transform);
-            barrelForward = barrelTip.transform.forward;
-            StartCoroutine("Fire");
-        }
-
-    }
 
 
 
@@ -84,7 +61,7 @@ public class Turret : MonoBehaviour
     {
         AttackSound.Play();
         // Instantiate the bullets as gameObjects
-        var bullet = Instantiate(projectile, barrelTip.transform.position, Quaternion.identity) as GameObject;
+        var bullet = Instantiate(projectile, barrelTip.transform.position, barrelTip.transform.rotation) as GameObject;
         // Add the impulse force to make the bullets move
         bullet.GetComponent<Rigidbody>().AddForce(barrelForward * 1000f, ForceMode.Impulse);
     }
