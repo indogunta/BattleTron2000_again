@@ -12,12 +12,19 @@ public class SmoothedCamera : MonoBehaviour {
 
 	void Update () {
 
+        
+
         Vector3 worldOff = target.TransformVector(offset);
         Vector3 targetpos = target.position + worldOff;
         Vector3 desiredPos = Vector3.Lerp(transform.position, targetpos, Time.deltaTime * smoothSpeed);
         transform.position = desiredPos;
 
-        transform.LookAt(target);
 
-	}
+
+        transform.LookAt(target);
+        //offset.y += Input.GetAxisRaw("Mouse ScrollWheel")* 100;
+     
+        offset.x += Input.GetAxisRaw("Mouse ScrollWheel") * 50;
+        offset.x = Mathf.Clamp(offset.x, -150, -25);
+    }
 }

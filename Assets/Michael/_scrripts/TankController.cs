@@ -40,10 +40,11 @@ public class TankController : MonoBehaviour {
     {
         if(Physics.Raycast (transform.position, -transform.up, 3f))
         {
-            rb.drag = 1;
+           rb.drag = 1;
 		
-			Vector3 jump = transform.up * acceleration * 100 * jumpForce * Input.GetAxisRaw ("Jump"); 
-			Vector3 forwardForce = transform.right * acceleration * Input.GetAxis("Vertical");
+			Vector3 jump = transform.up * acceleration * 100 * jumpForce * Input.GetAxisRaw ("Jump");
+            Vector3 jumpForwardForce = transform.right * acceleration * 100 * jumpForce * Input.GetAxisRaw("Jump");
+            Vector3 forwardForce = transform.right * acceleration * Input.GetAxis("Vertical");
 			Vector3 forwardBoostForce = transform.right * acceleration * boostMultiplier * Input.GetAxis("Fire3");
 
 
@@ -51,17 +52,19 @@ public class TankController : MonoBehaviour {
 			forwardBoostForce = forwardBoostForce * Time.deltaTime * rb.mass;
 
 			rb.AddForce (jump);
+           
+            rb.AddForce(jumpForwardForce);
             rb.AddForce(forwardForce);
 			rb.AddForce(forwardBoostForce);
 
-            Debug.Log(forwardForce.x+ " speed ");
+          //  Debug.Log(forwardForce.x + " speed ");
 
         }
         else
         {
-           rb.drag = 1;
+            rb.drag = 1;
 			Vector3 superGrav = -transform.up * acceleration * 100;
-			rb.AddRelativeForce (superGrav*15);
+			rb.AddRelativeForce (superGrav*20);
         }
 
         Vector3 turnTorque = Vector3.up * rotationRate * Input.GetAxis("Horizontal");
