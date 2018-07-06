@@ -8,8 +8,11 @@ public class ObjectiveFinderAI : MonoBehaviour {
 
     [SerializeField]
     ListOfQuests loq;
+    [SerializeField]
+    TrailRenderer trail;
 
     public GameObject follow;
+    public Transform warpPos;
 
    NavMeshAgent agent;
 	// Use this for initialization
@@ -21,5 +24,14 @@ public class ObjectiveFinderAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        agent.SetDestination(follow.transform.position);
+      
+        if (Vector3.Distance(follow.transform.position,transform.position)< 31f)
+        {
+            //trail.Clear();
+            agent.Warp(warpPos.position);
+            agent.isStopped = true;
+        }
+
+      
     }
 }
