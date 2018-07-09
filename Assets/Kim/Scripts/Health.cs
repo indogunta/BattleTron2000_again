@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
             StartCoroutine(killME());
             
             
-            StartCoroutine(KillParts());
+       //     StartCoroutine(KillParts());
         }
     }
 
