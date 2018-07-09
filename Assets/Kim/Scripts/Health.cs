@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SelectionBase]
 public class Health : MonoBehaviour
 {
 
@@ -46,7 +47,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             ListOfQuests.Instance.AllQuests[ListOfQuests.Instance.questIndex].CheckTargets(gameObject);
-            deathSound.PlayOneShot(clip);
+           
             StartCoroutine(killME());
             
             
@@ -57,13 +58,16 @@ public class Health : MonoBehaviour
     IEnumerator KillParts()
     {
         yield return new WaitForSeconds(3);
-        destructable.gameObject.SetActive(false);
+        Destroy(destructable.gameObject);
     }
     IEnumerator killME()
-    {
-        
-        yield return new WaitForSeconds(clip.length/2);
+    {  
+        deathSound.PlayOneShot(clip);
         Instantiate(destructable, destructableSpawnPoint.transform.position, destructableSpawnPoint.transform.rotation);
+     
         Destroy(gameObject);
+        yield return new WaitForSeconds(clip.length);
+
+
     }
 }

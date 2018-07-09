@@ -37,7 +37,8 @@ public class Spawner : MonoBehaviour
             {
                 yield return new WaitForSeconds(TimeToWait);
 
-                 Vector3 Spawnpos = Random.insideUnitSphere * radius;
+                 Vector3 Spawnpos =( Random.insideUnitSphere * radius);
+                
                 Spawnpos = spawnPoint.transform.position;
 
 

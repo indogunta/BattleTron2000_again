@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54938070087463984}
   m_Layer: 0
   m_Name: SuperBoyd_air_car_thingie_02_destruct (1)
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 54526084708818114}
   m_Layer: 0
   m_Name: fan_3
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 54913279844654122}
   m_Layer: 0
   m_Name: seat_left
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 54848420825066104}
   m_Layer: 0
   m_Name: fan_1
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 54693876706359546}
   m_Layer: 0
   m_Name: seat_right
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 54829471157453072}
   m_Layer: 0
   m_Name: landing_pad
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 54767840957706180}
   m_Layer: 0
   m_Name: left_rudder
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 54399889361094090}
   m_Layer: 0
   m_Name: front_flying_thing
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 54741849987731992}
   m_Layer: 0
   m_Name: left_fan
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 54839079993490098}
   m_Layer: 0
   m_Name: Fan_2
-  m_TagString: Untagged
+  m_TagString: ExplodeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174017718093992}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -977.61255, y: -687.747, z: 2389.163}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4981394772439022}

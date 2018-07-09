@@ -17,7 +17,7 @@ public class Gun : MonoBehaviour {
 
 	public int maxAmmo = 1;
 	private int currentAmmo;
-	public float reloadTime = .5f;
+	//public float reloadTime = .5f;
 	private bool isReloading = false;
 
 	public GameObject turret;
@@ -26,8 +26,8 @@ public class Gun : MonoBehaviour {
 
 	void Start()
 	{
-		currentAmmo = maxAmmo;
-		RB = GetComponent<Rigidbody>();
+		//currentAmmo = maxAmmo;
+	//	RB = GetComponent<Rigidbody>();
 
 
 	}
@@ -36,10 +36,10 @@ public class Gun : MonoBehaviour {
     private void Update()
     {
 
-		if (isReloading = false) 
-		{
-			return;
-		}
+		//if (isReloading = false) 
+		//{
+		//	return;
+		//}
 
          if(Input.GetButtonDown("Fire1"))
         {
@@ -47,35 +47,27 @@ public class Gun : MonoBehaviour {
         }
 
 
-		if (currentAmmo <= 0)
-		{
-			StartCoroutine (Reload ());
-			return;
-		}
+		//if (currentAmmo <= 0)
+		//{
+		////	StartCoroutine (Reload ());
+		//	return;
+		//}
     }
 
     void Shoot()
     {
-		if (currentAmmo <= 0)
-	{
-			return;
-	}
-		currentAmmo--;
+
+		//currentAmmo--;
 		bam.Play ();
-     //   BulletPool.Instance.SpawnFromPool("Boollay", transform.position, Quaternion.identity);
         GameObject bullet = Instantiate (ammo,cannonEnd.transform.position,cannonEnd.transform.rotation);
-
-       // Rigidbody rb = bullet.GetComponent<Rigidbody>();
-
-       // rb.AddForce (transform.forward * bulletForce, ForceMode.Impulse);
     }
 
 
-	IEnumerator Reload()
-	{
-		isReloading = true;
-		yield return new WaitForSeconds (reloadTime);
-		currentAmmo = maxAmmo;
-		isReloading = false;
-	}
+	//IEnumerator Reload()
+	//{
+	//	isReloading = true;
+	//	yield return new WaitForSeconds (reloadTime);
+	//	currentAmmo = maxAmmo;
+	//	isReloading = false;
+	//}
 }
