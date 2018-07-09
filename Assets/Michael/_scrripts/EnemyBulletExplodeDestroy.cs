@@ -25,13 +25,12 @@ public class EnemyBulletExplodeDestroy : MonoBehaviour
             Health health = other.GetComponent<Health>();
             StartCoroutine(Explode());
             if (health != null)
-            {
-                health.BeenHit(damage);
+                        {
+                            health.BeenHit(damage);
+                Destroy(gameObject.gameObject);
             }
-        }
-      
-       
-    }
+         }
+      }
 
 	void Update()
 	{

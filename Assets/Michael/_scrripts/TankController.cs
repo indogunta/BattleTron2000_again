@@ -52,8 +52,10 @@ public class TankController : MonoBehaviour {
 			forwardBoostForce = forwardBoostForce * Time.deltaTime * rb.mass;
 
 			rb.AddForce (jump);
-           
-            rb.AddForce(jumpForwardForce);
+            if (forwardForce.x >= 20)
+            {
+                rb.AddForce(jumpForwardForce);
+            }
             rb.AddForce(forwardForce);
 			rb.AddForce(forwardBoostForce);
 
