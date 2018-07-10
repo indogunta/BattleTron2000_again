@@ -11,7 +11,6 @@ public class Spawner : MonoBehaviour
     public float radius;
     public Transform spawnPoint;
 
-
     void Start()
     {
         spawnPoint.transform.position = gameObject.transform.position;
