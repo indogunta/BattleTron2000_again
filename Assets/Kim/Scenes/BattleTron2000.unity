@@ -2848,6 +2848,7 @@ MonoBehaviour:
   destructable: {fileID: 1819416442244552, guid: 7c77d6caa6f152b499839105dedf8f96,
     type: 2}
   destructableSpawnPoint: {fileID: 610806148}
+  deathSound: {fileID: 0}
 --- !u!114 &217747113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7203,6 +7204,7 @@ MonoBehaviour:
   destructable: {fileID: 1819416442244552, guid: 7c77d6caa6f152b499839105dedf8f96,
     type: 2}
   destructableSpawnPoint: {fileID: 471397862}
+  deathSound: {fileID: 0}
 --- !u!54 &621831342
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9702,7 +9704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1468198644810914, guid: 2eb6f03f40ac29f46a9a03cc041cec4d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eb6f03f40ac29f46a9a03cc041cec4d, type: 2}
@@ -9720,6 +9722,7 @@ GameObject:
   - component: {fileID: 865920746}
   - component: {fileID: 865920745}
   - component: {fileID: 865920748}
+  - component: {fileID: 865920749}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -9881,6 +9884,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &865920749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 865920743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d817cc35ac0814587cdb844c540648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &869908842
 GameObject:
   m_ObjectHideFlags: 0
@@ -10295,152 +10309,35 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.6809082
-      objectReference: {fileID: 0}
-    - target: {fileID: 114079116212001362, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 1948607497}
     - target: {fileID: 114079116212001362, guid: 76d499003b15e3c42a5f49dc0d29ba86,
         type: 2}
       propertyPath: playerPoints
       value: 
       objectReference: {fileID: 1948607494}
-    - target: {fileID: 114553868883711232, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.737931
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553868883711232, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553868883711232, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329590470909976, guid: 76d499003b15e3c42a5f49dc0d29ba86, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 223562231195549688, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114004272870965268, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114079116212001362, guid: 76d499003b15e3c42a5f49dc0d29ba86,
         type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114042881593661446, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114079116212001362, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: pointsUI
+      propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 889523880}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+      objectReference: {fileID: 1948607497}
+    - target: {fileID: 114611145301262368, guid: 76d499003b15e3c42a5f49dc0d29ba86,
         type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 1980
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.010784313
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 49
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.010784313
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887647963979820, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114072024279347048, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Sprite
+      propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 21300000, guid: 12241fa91cdc55d479b699eb68b53745,
-        type: 3}
-    - target: {fileID: 114072024279347048, guid: 76d499003b15e3c42a5f49dc0d29ba86,
+      objectReference: {fileID: 1948607497}
+    - target: {fileID: 114553868883711232, guid: 76d499003b15e3c42a5f49dc0d29ba86,
         type: 2}
-      propertyPath: m_Color.r
+      propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114072024279347048, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114072024279347048, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114573089953519092, guid: 76d499003b15e3c42a5f49dc0d29ba86, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76d499003b15e3c42a5f49dc0d29ba86, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &889523879 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1329590470909976, guid: 76d499003b15e3c42a5f49dc0d29ba86,
-    type: 2}
-  m_PrefabInternal: {fileID: 889523878}
 --- !u!114 &889523880 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114553868883711232, guid: 76d499003b15e3c42a5f49dc0d29ba86,
     type: 2}
   m_PrefabInternal: {fileID: 889523878}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &889523881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 889523879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42739a4be3758e24391035cfe1958206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &896706173
 GameObject:
   m_ObjectHideFlags: 0
@@ -13604,6 +13501,7 @@ MonoBehaviour:
   maxHealth: 2147483647
   destructable: {fileID: 1131471880}
   destructableSpawnPoint: {fileID: 1131471881}
+  deathSound: {fileID: 0}
 --- !u!154 &1131471884
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -30231,6 +30129,25 @@ Prefab:
       propertyPath: currentPoints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1969200461316000, guid: 7e1f0ab06d152524e89ffe5279c8afc0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223946856673586616, guid: 7e1f0ab06d152524e89ffe5279c8afc0,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224555031334256940, guid: 7e1f0ab06d152524e89ffe5279c8afc0,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224555031334256940, guid: 7e1f0ab06d152524e89ffe5279c8afc0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 82093001167315944, guid: 7e1f0ab06d152524e89ffe5279c8afc0, type: 2}
     - {fileID: 82680880169196590, guid: 7e1f0ab06d152524e89ffe5279c8afc0, type: 2}
@@ -31974,51 +31891,6 @@ Prefab:
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
       propertyPath: AllQuests.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].myTargets.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].myTargets.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].TargetTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].TargetTags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[3].TargetTags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[4].TargetTags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].questMarker.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].questMarker.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224146251794408596, guid: f0024f8d43ff84e40a3da77b305bfe11,
@@ -32113,38 +31985,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
-      propertyPath: AllQuests.Array.data[1].quest
-      value: Destroy Relay Tower!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].isTimed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].timer
-      value: 120
-      objectReference: {fileID: 0}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1948607494}
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
       propertyPath: AllQuests.Array.data[0].quest
-      value: Destroy Relay Tower!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].TargetTags.Array.data[0].tag
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].TargetTags.Array.data[0].qty
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].isGameObject
-      value: 0
+      value: ddd
       objectReference: {fileID: 0}
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
@@ -32153,302 +32000,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
-      propertyPath: AllQuests.Array.data[1].TargetTags.Array.data[0].tag
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].TargetTags.Array.data[0].qty
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224751220928992798, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -366
-      objectReference: {fileID: 0}
-    - target: {fileID: 224751220928992798, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 118
-      objectReference: {fileID: 0}
-    - target: {fileID: 224807602466244336, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -347
-      objectReference: {fileID: 0}
-    - target: {fileID: 224807602466244336, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].isGameObject
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].quest
-      value: 3 quest
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[0].tag
-      value: ExplodeTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[0].qty
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].isTimed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].timer
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[1].tag
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[1].qty
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[2].tag
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[2].qty
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[3].tag
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[2].TargetTags.Array.data[3].qty
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
       propertyPath: AllQuests.Array.data[0].timer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[3].quest
-      value: 4 quesr
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[3].TargetTags.Array.data[0].tag
-      value: ExplodeTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[3].TargetTags.Array.data[0].qty
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[3].timer
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[4].quest
-      value: 5 quwes
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[4].TargetTags.Array.data[0].tag
-      value: ExplodeTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[4].TargetTags.Array.data[0].qty
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[4].timer
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].myTargets.Array.data[0]
-      value: 
-      objectReference: {fileID: 217747111}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].myTargets.Array.data[1]
-      value: 
-      objectReference: {fileID: 621831338}
-    - target: {fileID: 114334818856148510, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.5724137
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114334818856148510, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
-      propertyPath: m_Color.g
+      propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114334818856148510, guid: f0024f8d43ff84e40a3da77b305bfe11,
+    - target: {fileID: 114756950082826978, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
-      propertyPath: m_Color.b
+      propertyPath: m_FontData.m_VerticalOverflow
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114756950082826978, guid: f0024f8d43ff84e40a3da77b305bfe11,
         type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756950082826978, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756950082826978, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_Color.g
+      propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114756950082826978, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.5176471
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756950082826978, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: playerManager
-      value: 
-      objectReference: {fileID: 1948607494}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[0].questMarker.Array.data[0]
-      value: 
-      objectReference: {fileID: 102250530}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].myTargets.Array.data[0]
-      value: 
-      objectReference: {fileID: 217747111}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].myTargets.Array.data[1]
-      value: 
-      objectReference: {fileID: 621831338}
-    - target: {fileID: 114003487661572944, guid: f0024f8d43ff84e40a3da77b305bfe11,
-        type: 2}
-      propertyPath: AllQuests.Array.data[1].questMarker.Array.data[0]
-      value: 
-      objectReference: {fileID: 102250530}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0024f8d43ff84e40a3da77b305bfe11, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2066375954 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1931679288833452, guid: f0024f8d43ff84e40a3da77b305bfe11,
-    type: 2}
-  m_PrefabInternal: {fileID: 2066375953}
---- !u!82 &2066375955
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2066375954}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1001 &2079102967
 Prefab:
   m_ObjectHideFlags: 0
