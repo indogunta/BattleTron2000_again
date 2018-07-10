@@ -296,9 +296,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130907576}
-        m_MethodName: BackToMain
-        m_Mode: 1
+      - m_Target: {fileID: 647979365}
+        m_MethodName: LevelChanging
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -478,6 +478,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &647979364 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1468198644810914, guid: 2eb6f03f40ac29f46a9a03cc041cec4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250186295}
+--- !u!114 &647979365 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114341159642525186, guid: 2eb6f03f40ac29f46a9a03cc041cec4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250186295}
+  m_Script: {fileID: 11500000, guid: 20a7ecd62ec49c547b461f122b35b440, type: 3}
+--- !u!82 &647979367
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647979364}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2b052e0a9b130604490df913e0e871b9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &945165807
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130907576}
+      - m_Target: {fileID: 647979365}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -849,6 +940,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114341159642525186, guid: 2eb6f03f40ac29f46a9a03cc041cec4d,
+        type: 2}
+      propertyPath: buttonAudio
+      value: 
+      objectReference: {fileID: 647979367}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eb6f03f40ac29f46a9a03cc041cec4d, type: 2}
   m_IsPrefabParent: 0
@@ -1165,6 +1261,7 @@ GameObject:
   - component: {fileID: 2130907572}
   - component: {fileID: 2130907576}
   - component: {fileID: 2130907577}
+  - component: {fileID: 2130907578}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: Untagged
@@ -1260,6 +1357,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 229199778}
+  loading: {fileID: 0}
+  loadingImage: {fileID: 0}
+  buttonAudio: {fileID: 0}
 --- !u!114 &2130907577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1373,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highScore: {fileID: 1012368047}
   currentScore: {fileID: 1539215074}
+--- !u!114 &2130907578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130907571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d817cc35ac0814587cdb844c540648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2135265768
 GameObject:
   m_ObjectHideFlags: 0
