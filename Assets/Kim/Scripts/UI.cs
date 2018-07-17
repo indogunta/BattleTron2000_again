@@ -26,6 +26,6 @@ public class UI : MonoBehaviour
 
     void UpdatePoints(int points)
     {
-        pointsUI.text = "Points: " + points;
+        pointsUI.text = "//DATA COLLECTED " + points + " kB";
     }
 }

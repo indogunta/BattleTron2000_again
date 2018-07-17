@@ -14,7 +14,7 @@ public class StartQuit : MonoBehaviour
     private void Start()
     {
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
     public void LevelChanging(string index)
     {
