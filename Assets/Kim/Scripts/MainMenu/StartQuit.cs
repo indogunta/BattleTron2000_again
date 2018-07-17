@@ -15,14 +15,14 @@ public class StartQuit : MonoBehaviour
 
     private void Awake()
     {
-<<<<<<< HEAD
-        Cursor.visible = true;
+
+        //Cursor.visible = true;
        // Cursor.lockState = CursorLockMode.Locked;
-=======
+
         //Cursor.visible = true;
         loadingImage.SetActive(false);
         //Cursor.lockState = CursorLockMode.None;
->>>>>>> 6ce578c66e68b69d856985a0254c01b13b2b6bff
+
     }
     public void LevelChanging(string index)
     {
