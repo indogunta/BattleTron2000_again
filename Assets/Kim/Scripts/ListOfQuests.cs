@@ -76,13 +76,6 @@ public class ListOfQuests : MonoBehaviour
              }
             yield return new WaitForSeconds(1);
         }
-
-        //if (TimerCompleted != null)
-        //{
-        //  TimerCompleted();
-        //}
-      
-
         questTimer.text = "";
     }
 

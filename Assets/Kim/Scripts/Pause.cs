@@ -20,13 +20,13 @@ public class Pause : MonoBehaviour
         {
             if(paused)
             {
-
                 Paused();
+             //   Cursor.lockState = CursorLockMode.None;
             }
             else
             {
                 Resume();
-
+              //  Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }

@@ -12,6 +12,7 @@ public class UISaving : MonoBehaviour
     private Toggle fullScreen;
     [SerializeField]
     private Text res;
+    bool bytes;
 
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class UISaving : MonoBehaviour
         PlayerPrefs.SetInt("FullScreen", Convert.ToInt32(fullScreen.isOn));
         PlayerPrefs.SetString("Resolusion", res.text);
         PlayerPrefs.Save();
+        Convert.ToByte(bytes);
     }
-
+   
 }
