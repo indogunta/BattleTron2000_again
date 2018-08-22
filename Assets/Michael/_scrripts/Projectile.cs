@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour {
         float stepSize = 1.0f / predictionStepsPerFrame;
         for (float step = 0; step < 1; step += stepSize)
         {
-            bulletVel += Physics.gravity * stepSize * Time.deltaTime; ;
+            bulletVel += Physics.gravity * stepSize * Time.deltaTime;
             Vector3 point2 = point1 + bulletVel * stepSize *Time.deltaTime;
 
             Ray ray = new Ray(point1, point2 - point1);

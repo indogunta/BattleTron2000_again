@@ -87,7 +87,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 68531bccf7da7724f981ae719c1cfb73, type: 2}
   m_StaticBatchInfo:
@@ -163,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6576a953b3957ce48bd844055190ffc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 420
+  speed: 800
   predictionStepsPerFrame: 6
   bulletVel: {x: 0, y: 0, z: 0}
 --- !u!114 &114636208885727726
